@@ -1,5 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { motion } from "framer-motion";
 // Using a simple SVG icon for the arrow, styled to look maroon/red.
+const text = `Frequently
+ Asked Questions`;
 
 // Sample FAQ data based on the previous conversation about the Thunk 3 Motor
 const faqData = [
@@ -34,7 +37,22 @@ const faqData = [
  * @param {number} props.activeId - The currently open item ID.
  * @param {function} props.onToggle - Function to handle click and update activeId.
  */
+  const lines = text.split("\n");
 const AccordionItem = ({ id, question, answer, activeId, onToggle }) => {
+
+  const [isCarLitOnLoad, setIsCarLitOnLoad] = useState(false);
+
+  useEffect(() => {
+    // Set a 2000ms (2 second) delay before automatically turning the lights on.
+    const timer = setTimeout(() => {
+      setIsCarLitOnLoad(true); 
+    }, 2000); // <-- 2000 milliseconds = 2 seconds
+
+    // Cleanup function
+    return () => clearTimeout(timer);
+  }, []);
+
+
   const isOpen = id === activeId;
 
   // SVG for the rotating arrow icon (styled deep red/maroon)
@@ -52,8 +70,10 @@ const AccordionItem = ({ id, question, answer, activeId, onToggle }) => {
         clipRule="evenodd"
       />
     </svg>
-    
     </div>
+
+
+
   );
 
   return (
@@ -67,7 +87,7 @@ const AccordionItem = ({ id, question, answer, activeId, onToggle }) => {
     >
       {/* Accordion Header/Button */}
       <button
-        className="w-full flex justify-between items-center p-6 text-left font-inter text-lg uppercase tracking-wide text-white focus:outline-none"
+        className="w-full flex justify-between items-center p-6 text-left font-inter text-sm sm:text-lg uppercase tracking-wide text-[#FAF9F6] focus:outline-none"
         onClick={() => onToggle(id)}
       >
         <span>{question}</span>
@@ -100,9 +120,32 @@ const Faq = () => {
   return (
     <div className="min-h-screen bg-black flex items-start justify-center p-4 sm:p-10">
       <div className="w-full max-w-7xl pt-12">
-        <h1 className="font-title text-4xl sm:text-5xl font-extrabold text-center text-white mb-10 uppercase tracking-wider">
-          Frequently <br /> Asked Questions
-        </h1>
+        <h3 className="font-title text-4xl sm:text-5xl font-medium text-center text-white mb-10 uppercase tracking-wider">
+        
+               {lines.map((line, lineIndex) => {
+          const letters = Array.from(line);
+          return (
+            <span key={lineIndex} className="block font-title">
+              {letters.map((char, i) => (
+                <motion.span
+                  key={i}
+                  initial={{ opacity: 1, y: -20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.3 }} 
+                  transition={{
+                    duration: 0.5,
+                     delay:  i * 0.05 + lineIndex * 0.3,  // stagger across lines
+                  }}
+                  className="inline-block"
+                >
+                  {char === " " ? "\u00A0" : char}
+                </motion.span>
+              ))}
+            </span>
+          );
+        })} 
+        
+        </h3>
         {faqData.map((item) => (
           <AccordionItem
             key={item.id}
