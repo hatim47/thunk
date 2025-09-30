@@ -118,9 +118,9 @@ const Faq = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black flex items-start justify-center p-4 sm:p-10">
+    <div className="min-h-screen bg-black flex items-start justify-center p-6 sm:p-10">
       <div className="w-full max-w-7xl pt-12">
-        <h3 className="font-title text-4xl sm:text-5xl font-medium text-center text-white mb-10 uppercase tracking-wider">
+        <h3 className="font-title text-3xl sm:text-5xl font-medium text-center text-white mb-10 uppercase tracking-wider">
         
                {lines.map((line, lineIndex) => {
           const letters = Array.from(line);

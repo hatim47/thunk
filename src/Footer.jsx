@@ -60,9 +60,9 @@ const Footer = () => {
           duration: 1.5,
           ease: "easeInOut",
         }}
-        className="h-32 border-l border-white mx-5  sm:mx-10 my-5"></motion.div>
+        className="h-32 border-l border-white max-[430px]:mx-5 sm:mx-10 my-5"></motion.div>
     < motion.div
-     initial={{ opacity: 1, x: 200 }}
+     initial={{ opacity: 1, x: 100 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, amount: 0.1 }}
         transition={{ duration: 1.5, ease: "easeInOut" }}
@@ -73,13 +73,13 @@ const Footer = () => {
 
 
                <motion.button
-                    className="w-fit relative overflow-hidden px-8 py-2 rounded-full border bg-[#666666]/28 border-gray-400 text-sm  sm:text-base font-body group"
+                    className="w-fit relative overflow-hidden uppercase px-8 text-xs sm:text-base  py-2 rounded-full border bg-[#666666]/28 border-gray-400  font-body group"
                     initial={{ opacity: 0, x: 100 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true, amount: 0.1 }}
                     transition={{ duration: 1.5, ease: "easeInOut" }}
                   >
-                    <span className="block h-[1em] overflow-hidden">
+                    <span className="block h-[1.5em] sm:h-[1.2em] overflow-hidden">
                       {/* First layer */}
                       <span className="block transition-transform duration-500 ease-in-out group-hover:-translate-y-full">
                         BOOK YOURS NOW  •
@@ -111,13 +111,13 @@ const Footer = () => {
             </button> */}
 
 <motion.button
-                    className=" relative overflow-hidden uppercase px-8 py-2 rounded-full border bg-[#666666]/28 border-gray-400  font-body group"
+                    className=" relative overflow-hidden uppercase px-8 text-xs sm:text-base  py-2 rounded-full border bg-[#666666]/28 border-gray-400  font-body group"
                     initial={{ opacity: 0, x: -100 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true, amount: 0.1 }}
                     transition={{ duration: 1.5, ease: "easeInOut" }}
                   >
-                    <span className="block h-[1em] overflow-hidden">
+                    <span className="block h-[1.2em] overflow-hidden">
                       {/* First layer */}
                       <span className="block transition-transform duration-500 ease-in-out group-hover:-translate-y-full">
                        Submit now  •
@@ -131,7 +131,7 @@ const Footer = () => {
 
           </form>
         </div>
-<div className=" flex gap-10 sm:gap-20">
+<div className=" flex gap-8 sm:gap-20">
         {/* Middle Section (Links) */}
         <div className="flex flex-col space-y-2 ">
           <h3 className="text-lg sm:text-xl font-title uppercase font-medium text-white mb-2 ">Quick Links</h3>
@@ -165,12 +165,12 @@ const Footer = () => {
             <div>
          
           <div className="flex space-x-2 sm:space-x-4">
-            <a href="#" className="hover:text-white  text-[#757575] p-2 border bg-[#666666]/28 border-[#DDDDDD] rounded-full transition"><Icon icon="jam:linkedin" className="text-white w-4 h-4 md:w-4 md:h-4" /></a>
-            <a href="#" className="hover:text-white  text-[#757575] p-2 border bg-[#666666]/28 border-[#DDDDDD] rounded-full transition"><Icon icon="mdi:instagram" className="text-white w-4 h-4 md:w-4 md:h-4" /></a>
-            <a href="#" className="hover:text-white  text-[#757575] p-2 border bg-[#666666]/28 border-[#DDDDDD] rounded-full transition"><Icon icon="ic:round-tiktok" className="text-white w-4 h-4 md:w-4 md:h-4" /></a>
-            <a href="#" className="hover:text-white  text-[#757575] p-2 border bg-[#666666]/28 border-[#DDDDDD] rounded-full transition"><Icon icon="mdi:facebook" className="text-white w-4 h-4 md:w-4 md:h-4" /></a>
-            <a href="#" className="hover:text-white  text-[#757575] p-2 border bg-[#666666]/28 border-[#DDDDDD] rounded-full transition"><Icon icon="mdi:youtube" className="text-white w-4 h-4 md:w-4 md:h-4" /></a>
-            <a href="#" className="hover:text-white  text-[#757575] p-2 border bg-[#666666]/28 border-[#DDDDDD] rounded-full transition"><Icon icon="mingcute:pinterest-fill" className="text-white w-4 h-4 md:w-4 md:h-4" /></a>
+            <a href="#" className="hover:text-white  text-[#757575] p-1 sm:p-2 border bg-[#666666]/28 border-[#DDDDDD] rounded-full transition"><Icon icon="jam:linkedin" className="text-white w-3 h-3 md:w-4 md:h-4" /></a>
+            <a href="#" className="hover:text-white  text-[#757575] p-1 sm:p-2 border bg-[#666666]/28 border-[#DDDDDD] rounded-full transition"><Icon icon="mdi:instagram" className="text-white w-3 h-3 md:w-4 md:h-4" /></a>
+            <a href="#" className="hover:text-white  text-[#757575] p-1 sm:p-2 border bg-[#666666]/28 border-[#DDDDDD] rounded-full transition"><Icon icon="ic:round-tiktok" className="text-white w-3 h-3 md:w-4 md:h-4" /></a>
+            <a href="#" className="hover:text-white  text-[#757575] p-1 sm:p-2 border bg-[#666666]/28 border-[#DDDDDD] rounded-full transition"><Icon icon="mdi:facebook" className="text-white w-3 h-3 md:w-4 md:h-4" /></a>
+            <a href="#" className="hover:text-white  text-[#757575] p-1 sm:p-2 border bg-[#666666]/28 border-[#DDDDDD] rounded-full transition"><Icon icon="mdi:youtube" className="text-white w-3 h-3 md:w-4 md:h-4" /></a>
+            <a href="#" className="hover:text-white  text-[#757575] p-1 sm:p-2 border bg-[#666666]/28 border-[#DDDDDD] rounded-full transition"><Icon icon="mingcute:pinterest-fill" className="text-white w-3 h-3 md:w-4 md:h-4" /></a>
 
           </div>
         </div>
@@ -182,9 +182,9 @@ const Footer = () => {
         </div>
       </div>
  </div>
-      <div className="mt-10 text-center text-sm text-gray-500">
+      <p className="mt-10 text-center text-sm text-gray-500">
         © {new Date().getFullYear()} CarShowcase. All rights reserved.
-      </div>
+      </p>
     </footer>
     </>
   );

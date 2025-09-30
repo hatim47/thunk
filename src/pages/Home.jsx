@@ -234,7 +234,7 @@ export default function Home() {
         </h2> */}
 <AnimatedText
   text={`THUNK\nREIMAGINES`}
-  className=" w-full xl:w-5/12 lg:w-7/12 text-4xl md:text-5xl leading-tight"
+  className=" w-full xl:w-5/12 lg:w-7/12 text-3xl md:text-5xl leading-tight"
 />
         {/* Horizontal line + Button */}
         <div className="flex w-full items-center justify-center md:justify-end  mb-6">
@@ -243,7 +243,7 @@ export default function Home() {
             VIEW OUR PRODUCT •
           </button> */}
            <motion.div
-        className="h-[1px] w-8/12 bg-[#2F2F2F]"
+        className="h-[1px] w-6/12 bg-[#2F2F2F]"
         initial={{ scaleX: 0, opacity: 0 }}
         whileInView={{ scaleX: 1, opacity: 1 }}
         viewport={{ once: true, amount: 0.1 }}
@@ -255,13 +255,13 @@ export default function Home() {
 
       {/* Animated button */}
        <motion.button
-        className="relative overflow-hidden px-8 py-3 rounded-full bg-[#666666]/28 border border-gray-400  font-body group"
+        className="relative overflow-hidden  px-4 sm:px-8  pt-2 pb-1 sm:py-3 text-xs sm:text-base rounded-full text-nowrap bg-[#666666]/28 border border-gray-400  font-body group"
         initial={{ opacity: 0, x: 100 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, amount: 0.1 }}
         transition={{ duration: 1.5, ease: "easeInOut" }}
       >
-        <span className="block h-[1em] overflow-hidden">
+        <span className="block h-[1.5em] sm:h-[1em] overflow-hidden">
           {/* First layer */}
           <span className="block transition-transform duration-500 ease-in-out group-hover:-translate-y-full">
             VIEW OUR PRODUCT •
@@ -333,7 +333,7 @@ export default function Home() {
         transition={{ duration: 1.5, ease: "easeInOut" }}
             className="group px-6 py-2 rounded-full bg-[#666666]/28 border border-gray-400  font-body transition">
              
-             <span className="block h-[1em] overflow-hidden">
+             <span className="block h-[1.2em] overflow-hidden">
           {/* First layer */}
           <span className="block transition-transform duration-500 ease-in-out group-hover:-translate-y-full">
             MORE ABOUT US •
@@ -388,7 +388,7 @@ className="hidden md:block absolute left-0 top-1/2 -translate-y-1/3 h-70 w-[1px]
         </h3> */}
 <AnimatedText
   text={`WHY CHOOSE\nTHUNK 3`}
-  className=" text-center text-4xl md:text-5xl leading-tight"
+  className=" text-center text-3xl md:text-5xl leading-tight"
 />
 
         {/* <p className="mt-6 text-center text-lg md:text-xl text-[#A61313]">As Your New EV Conversion Motor?</p> */}
@@ -508,13 +508,13 @@ className="hidden md:block absolute left-0 top-1/2 -translate-y-1/3 h-70 w-[1px]
     </div>
      <div className="w-full flex justify-center py-10">
    <motion.button
-        className="relative overflow-hidden px-8 py-1 rounded-full bg-[#666666]/28 border border-gray-400 font-body group"
+        className="relative overflow-hidden uppercase px-8 text-xs sm:text-base  py-2 rounded-full border bg-[#666666]/28 border-gray-400  font-body group"
         initial={{ opacity: 0, x: 100 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, amount: 0.1 }}
         transition={{ duration: 1.5, ease: "easeInOut" }}
       >
-        <span className="block h-[1.5em] overflow-hidden">
+        <span className="block h-[1.7em] sm:h-[1.5em] overflow-hidden">
           {/* First layer */}
           <span className="block text-base/6 line transition-transform uppercase duration-500 ease-in-out group-hover:-translate-y-full">
             View our EV conversion motor •
@@ -545,7 +545,7 @@ className="hidden md:block absolute left-0 top-1/2 -translate-y-1/3 h-70 w-[1px]
 
                                     <AnimatedText
   text={`Innovation in\nElectrification`}
-  className=" text-center text-4xl uppercase md:text-6xl leading-tight"
+  className=" text-center text-3xl uppercase md:text-5xl leading-tight"
 />
         {/* <p className="mt-6 text-lg md:text-xl uppercase text-[#A61313]">
           Trendsetting EV Electric Motors for <br /> Yesterday’s Cars
