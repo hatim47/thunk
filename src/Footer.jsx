@@ -2,7 +2,7 @@ import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
 import React, { useState, useEffect } from 'react';
 const text = `Taking Pre-
- Orders Now!`;
+Orders Now!`;
 
    const lines = text.split("\n");
 const Footer = () => {
@@ -16,19 +16,19 @@ const Footer = () => {
     // Cleanup function
     return () => clearTimeout(timer);
   }, []);
+const texts = 'Lock in your custom EV motor and be one of the first to experience the Thunk3 advantage.';
 
   return (
     <> 
-       <section className="relativew w-full bg-[#A61313] px-6  flex flex-col items-center justify-center text-center text-white ">
-
- <div className="max-w-7xl  mx-auto flex  items-center text-center">
-    <div className="text-left w-full sm:w-7/12  ">
-       <h3 className="font-title uppercase text-start text-lg md:text-5xl font-medium">
+  <section className="relativew w-full bg-[#A61313] px-6 flex flex-col items-center justify-center text-white ">
+ <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center py-5  sm:py-0 gap-2 sm:gap-0 ">
+    <div className="text-center sm:text-left w-full sm:w-4/12 ">
+       <h3 className="font-my uppercase text-center sm:text-start text-lg md:text-4xl font-medium  flex justify-center sm:block">
        
         {lines.map((line, lineIndex) => {
                  const letters = Array.from(line);
                  return (
-                   <span key={lineIndex} className="block font-title">
+                   <span key={lineIndex} className="block ">
                      {letters.map((char, i) => (
                        <motion.span
                          key={i}
@@ -60,17 +60,16 @@ const Footer = () => {
           duration: 1.5,
           ease: "easeInOut",
         }}
-        className="h-32 border-l border-white max-[430px]:mx-5 sm:mx-10 my-5"></motion.div>
+        className=" w-full sm:w-px h-px sm:h-32 border-b sm:border-b-0 sm:border-l border-white max-[430px]:mx-5 sm:mx-10 sm:my-5"></motion.div>
     < motion.div
      initial={{ opacity: 1, x: 100 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, amount: 0.1 }}
         transition={{ duration: 1.5, ease: "easeInOut" }}
-    className="flex flex-col gap-5 text-left">
-      <span className="text-white text-sm  sm:text-base ">Lock in your custom EV motor and be one of the first to experience the Thunk3 advantage.</span>
-   
-
-
+    className="flex flex-col gap-5 text-center sm:text-left items-center sm:items-start">
+<h6 className="text-white text-sm sm:text-lg m-0 p-0 w-full leading-relaxed  whitespace-pre-line">
+  {texts}
+</h6>
 
                <motion.button
                     className="w-fit relative overflow-hidden uppercase px-8 text-xs sm:text-base  py-2 rounded-full border bg-[#666666]/28 border-gray-400  font-body group"

@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 const text = `REDEFINING CLASSIC
  CAR CONVERSIONS`;
 
-const BASE_DELAY = 1.5;
+const BASE_DELAY = 2.5;
 const letterVariant = {
   hidden: { opacity: 0, y: -30 },
   show: (i) => ({
@@ -38,10 +38,10 @@ function AnimatedText({ text, className ,lineClasses=[]  }) {
   const lines = text.split("\n"); // 👈 handle line breaks
 
   return (
-    <span className={`inline-block ${className}`}>
+    <span className={`inline-block font-title ${className}`}>
       {lines.map((line, lineIndex) => (
         <span key={lineIndex} className={`block ${
-            lineClasses[lineIndex] || "font-title" // 👈 apply custom class if provided
+            lineClasses[lineIndex] || "" // 👈 apply custom class if provided
           }`}>
           {Array.from(line).map((char, i) => (
             <motion.span
@@ -113,7 +113,7 @@ export default function Home() {
   return (
     <>
     <Head></Head>
-  <section className="w-max-7xl px-4 flex justify-center mb-2">
+  <section className="w-max-7xl px-4 flex justify-center sm:mt-30 mb-2">
         
         {/* Container for the Hover (Light Up) effect. Use 'group' and 'relative' */}
         <div className="group relative w-7/12">
@@ -142,11 +142,11 @@ export default function Home() {
       <section className="relative w-full flex flex-col items-center justify-center text-center text-white ">
         {/* Content */}
        <div className="z-10 max-w-4xl px-6">
-      <h1 className="text-3xl md:text-6xl font-medium">
+      <h1 className="text-3xl md:text-6xl font-medium font-title">
            {lines.map((line, lineIndex) => {
           const letters = Array.from(line);
           return (
-            <span key={lineIndex} className="block font-title">
+            <span key={lineIndex} className="block ">
               {letters.map((char, i) => (
                 <motion.span
                   key={i}
@@ -154,7 +154,7 @@ export default function Home() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{
                     duration: 0.5,
-                     delay: 1.5 + i * 0.05 + lineIndex * 0.3,  // stagger across lines
+                     delay: 1.8 + i * 0.05 + lineIndex * 0.3,  // stagger across lines
                   }}
                   className="inline-block"
                 >
@@ -167,13 +167,13 @@ export default function Home() {
       </h1>
 
     <AnimatedTextt
-        text={`THUNK reimagines that legacy\nwith the Thunk3 EV conversion motor`}
-        className="text-sm  sm:text-lg text-[#A61313]"
+        text={`THUNK reimagines that legacy with the\nThunk3 EV conversion motor`}
+        className="text-sm mt-6 sm:text-lg text-[#A61313]"
       />
     </div>
 
         {/* Curved line at bottom */}
-        <div className="absolute top-4 w-full">
+        <div className="absolute top-25 w-full">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1728 278" fill="none">
             <path d="M-124 278C-124 278 -124 278 -124 278C-95.4732 259.861 -64.4335 242.275 -34.3267 226.648C242.937 85.7131 553.895 16.981 863.659 15.5043C1173.58 14.1887 1483.2 88.6473 1760.46 229.077C1791.45 244.691 1821.44 260.705 1852 278C1852 278 1852 278 1852 278C1821.94 259.841 1792.4 242.983 1761.77 226.548C1487.95 78.6655 1175.97 -0.909466 863.628 0.504292C551.463 1.91802 238.415 75.6354 -35.6738 224.137C-65.4166 240.589 -96.0216 259.025 -124 278Z" fill="url(#paint0_linear_60_194)"/>
             <defs>
@@ -227,21 +227,14 @@ export default function Home() {
 
 
        
-        {/* Heading */}
-        {/* <h2 className="font-title  text-4xl md:text-5xl leading-tight">
-          <span className="block ">THUNK</span>
-          <span className="block text-white/60">REIMAGINES</span>
-        </h2> */}
+     
 <AnimatedText
   text={`THUNK\nREIMAGINES`}
-  className=" w-full xl:w-5/12 lg:w-7/12 text-3xl md:text-5xl leading-tight"
+  className=" w-full xl:w-5/12 lg:w-7/12 text-3xl md:text-6xl leading-tight"
 />
-        {/* Horizontal line + Button */}
+ 
         <div className="flex w-full items-center justify-center md:justify-end  mb-6">
-          {/* <div className="h-[1px] w-8/12 bg-[#2F2F2F] "></div>
-          <button className="px-6 py-2 rounded-full border border-gray-400 text-sm font-body hover:bg-gray-200 hover:text-black transition">
-            VIEW OUR PRODUCT •
-          </button> */}
+      
            <motion.div
         className="h-[1px] w-6/12 bg-[#2F2F2F]"
         initial={{ scaleX: 0, opacity: 0 }}
@@ -253,7 +246,7 @@ export default function Home() {
         }}
       />
 
-      {/* Animated button */}
+ 
        <motion.button
         className="relative overflow-hidden  px-4 sm:px-8  pt-2 pb-1 sm:py-3 text-xs sm:text-base rounded-full text-nowrap bg-[#666666]/28 border border-gray-400  font-body group"
         initial={{ opacity: 0, x: 100 }}
@@ -262,11 +255,11 @@ export default function Home() {
         transition={{ duration: 1.5, ease: "easeInOut" }}
       >
         <span className="block h-[1.5em] sm:h-[1em] overflow-hidden">
-          {/* First layer */}
+        
           <span className="block transition-transform duration-500 ease-in-out group-hover:-translate-y-full">
             VIEW OUR PRODUCT •
           </span>
-          {/* Second layer */}
+        
           <span className="block transition-transform duration-500 ease-in-out group-hover:-translate-y-full">
             VIEW OUR PRODUCT •
           </span>
@@ -274,13 +267,13 @@ export default function Home() {
       </motion.button>
         </div>
         </div>
-        {/* Paragraph */}
+     
         <motion.p 
          initial={{ opacity: 0, x: -100 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, amount: 0.1 }}
         transition={{ duration: 1.5, ease: "easeInOut" }}
-        className="font-body text-gray-300 text-base leading-relaxed">
+        className="font-body text-gray-300 text-base sm:text-lg leading-relaxed">
           Every classic automobile carries history under its hood. THUNK reimagines that legacy with 
           the Thunk3 EV conversion motor and a compact, powerful system that transforms timeless machines 
           into high-performance electric vehicles. We love our classics but acknowledge the pain and challenges 
@@ -309,7 +302,7 @@ export default function Home() {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, amount: 0.1 }}
         transition={{ duration: 1.5, ease: "easeInOut" }}
-        className="font-body text-gray-300 mb-4">
+        className="font-body text-base sm:text-lg text-gray-300 mb-4">
             The story of THUNK began with a passion for classic cars and a determination to keep them relevant in a changing world. 
             What started as a vision grew into the development of the Thunk3 motor,
              a solution that integrates modern engineering with respect for legacy.
@@ -318,7 +311,7 @@ export default function Home() {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, amount: 0.1 }}
         transition={{ duration: 1.5, ease: "easeInOut" }}
-        className="font-body text-gray-300 mb-6">
+        className="font-body text-base sm:text-lg text-gray-300 mb-6">
           Our focus is on building products we can fully support.
            Our first product is the Thunk3 motor, 
            with future plans to add complementary products such as battery boxes.
@@ -376,8 +369,11 @@ className="hidden md:block absolute left-0 top-1/2 -translate-y-1/3 h-70 w-[1px]
         transition={{ duration: 1.5, ease: "easeInOut" }}
             src="/Group 19.png"   // 👉 replace with your transparent car image
             alt="Classic Car"
-            className="hidden sm:block w-4/12 absolute right-0  md:pl-12"
+            className="hidden sm:block w-4/12 absolute right-0  md:pl-12 z-2"
           />
+            <div
+      className={`hidden sm:block absolute right-0 w-[270px] h-[300px] bg-white blur-[180px] rounded-full z-0 transition-opacity duration-2000`}
+    ></div>
       </div>
     </section>
 
@@ -415,7 +411,7 @@ className="hidden md:block absolute left-0 top-1/2 -translate-y-1/3 h-70 w-[1px]
         src="/Group 15.png" alt="Thunk3 EV Motor" className="absolute w-9/12 h-auto z-12"/>
          <motion.div 
                initial={{ opacity: 0, y: 40 }}          // hidden + pushed down
-  whileInView={{ opacity: 1, y: 0 }}       // visible + natural place
+  whileInView={{ opacity: 0.5, y: 0 }}       // visible + natural place
   viewport={{ once: true, amount: 0.1 }}   // trigger on scroll, only once
   transition={{
     duration: 1.5,
@@ -459,7 +455,13 @@ className="hidden md:block absolute left-0 top-1/2 -translate-y-1/3 h-70 w-[1px]
   className=" text-center text-2xl uppercase md:text-3xl leading-tight"
 />
         <p className="text-sm sm:text-lg ">
-            The biggest challenge of converting a classic car is where to place the batteries. Most EV conversion motors sit in the engine bay, taking up valuable space. The **Thunk3 motor** is designed to sit in the transmission tunnel, freeing up the engine bay for batteries and other critical components. Unlike rear-mounted motors that protrude into the gas tank area, the Thunk3 allows you to mount batteries in both the front (trunk!) and the rear. This creates **excellent balance and handling**—a benefit no other motor currently offers.
+          The biggest challenge of converting a classic car is where to place the batteries.
+           Most EV conversion motors sit in the engine bay, taking up valuable space.
+            The Thunk3 motor is designed to sit in the transmission tunnel,
+             freeing up the engine bay for batteries and other critical components.
+              Unlike rear-mounted motors that protrude into the gas tank area,
+           the Thunk3 allows you to mount batteries in both the front (frunk!) 
+           and the rear. This creates excellent balance and handling — a benefit no other motor currently offers.
         </p>
     </div>
 
@@ -499,10 +501,9 @@ className="hidden md:block absolute left-0 top-1/2 -translate-y-1/3 h-70 w-[1px]
   text={`Performance`}
   className=" text-center text-xl uppercase md:text-3xl leading-tight"
 />
-
-            <p className="text-sm  sm:text-lg  leading-relaxed">
-                Instant torque and smooth acceleration deliver a driving experience beyond expectation.
-            </p>
+    <p className="text-sm  sm:text-lg  leading-relaxed">
+        Instant torque and smooth acceleration deliver a driving experience beyond expectation.
+    </p>
         </div>
 
     </div>
@@ -535,9 +536,9 @@ className="hidden md:block absolute left-0 top-1/2 -translate-y-1/3 h-70 w-[1px]
         </section>
         <Faq></Faq>
 
-     <section className="relative w-full  flex flex-col items-center justify-center text-center text-white  sm:my-40 ">
+     <section className="relative w-full  flex flex-col items-center justify-center text-center text-white  sm:my-30 ">
       {/* Content */}
-      <div className="z-10 max-w-4xl  px-6">
+      <div className="z-10 max-w-4xl flex flex-col  px-6">
         {/* <h2 className="text-4xl md:text-6xl font-medium">
           <span className="block font-title uppercase">Innovation in  <br />Electrification</span>
         
@@ -557,7 +558,7 @@ className="hidden md:block absolute left-0 top-1/2 -translate-y-1/3 h-70 w-[1px]
       </div>
 
       {/* Curved line at bottom */}
-      <div className="absolute top-4 w-full">
+      <div className="absolute top-25 w-full">
    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1728 278" fill="none">
 <path d="M-124 278C-124 278 -124 278 -124 278C-95.4732 259.861 -64.4335 242.275 -34.3267 226.648C242.937 85.7131 553.895 16.981 863.659 15.5043C1173.58 14.1887 1483.2 88.6473 1760.46 229.077C1791.45 244.691 1821.44 260.705 1852 278C1852 278 1852 278 1852 278C1821.94 259.841 1792.4 242.983 1761.77 226.548C1487.95 78.6655 1175.97 -0.909466 863.628 0.504292C551.463 1.91802 238.415 75.6354 -35.6738 224.137C-65.4166 240.589 -96.0216 259.025 -124 278Z" fill="url(#paint0_linear_60_194)"/>
 <defs>

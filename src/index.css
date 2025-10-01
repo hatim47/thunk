@@ -16,6 +16,9 @@
 p{
   color:#757575 !important;
 }
+.font-my{
+  font-family: "Crimson Text";
+}
 .font-title {
   background: linear-gradient(180deg, #FFF 23.08%, #636363 100%);
 background-clip: text;

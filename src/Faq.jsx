@@ -125,7 +125,7 @@ const Faq = () => {
                {lines.map((line, lineIndex) => {
           const letters = Array.from(line);
           return (
-            <span key={lineIndex} className="block font-title">
+            <span key={lineIndex} className="block ">
               {letters.map((char, i) => (
                 <motion.span
                   key={i}
