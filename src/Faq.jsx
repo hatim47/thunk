@@ -118,7 +118,7 @@ const Faq = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black flex items-start justify-center p-6 sm:p-10">
+    <div className="min-h-screen bg-black flex items-start justify-center p-6 sm:py-40">
       <div className="w-full max-w-7xl pt-12">
         <h3 className="font-title text-3xl sm:text-5xl font-medium text-center text-white mb-10 uppercase tracking-wider">
         

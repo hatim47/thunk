@@ -35,7 +35,7 @@ const videos = [
 
 
 
-export default function Video() {
+export default function Videos() {
     const [open, setOpen] = useState(false);
   const [index, setIndex] = useState(0);
       useEffect(() => {
@@ -105,7 +105,7 @@ See how best EV motors redefine performance and how THUNK sets the standard for 
 <section className="max-w-7xl mx-auto px-6 pb-30 sm:pb-60">
       
     <div className="flex flex-col gap-6 py-10">
-      {videos.map((video, i) => (
+      {videos.map((Videosa, i) => (
         <div
           key={i}
           className="relative cursor-pointer rounded-lg overflow-hidden group"
@@ -116,7 +116,7 @@ See how best EV motors redefine performance and how THUNK sets the standard for 
         >
           {/* Thumbnail */}
           <img
-            src={video.thumbnail}
+            src={Videosa.thumbnail}
             alt={`Video ${i + 1}`}
             className="w-full h-auto object-cover"
           />

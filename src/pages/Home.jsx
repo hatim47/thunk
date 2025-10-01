@@ -248,7 +248,7 @@ export default function Home() {
 
  
        <motion.button
-        className="relative overflow-hidden  px-4 sm:px-8  pt-2 pb-1 sm:py-3 text-xs sm:text-base rounded-full text-nowrap bg-[#666666]/28 border border-gray-400  font-body group"
+        className="font-my relative overflow-hidden  px-4 sm:px-8  pt-2 pb-1 sm:py-3 text-xs sm:text-base rounded-full text-nowrap bg-[#666666]/28 border border-gray-400  font-body group"
         initial={{ opacity: 0, x: 100 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, amount: 0.1 }}
@@ -321,7 +321,7 @@ export default function Home() {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, amount: 0.1 }}
         transition={{ duration: 1.5, ease: "easeInOut" }}
-            className="group px-6 py-2 rounded-full bg-[#666666]/28 border border-gray-400  font-body transition">
+            className="font-my group px-6 py-2 rounded-full bg-[#666666]/28 border border-gray-400  font-body transition">
              
              <span className="block h-[1.2em] overflow-hidden">
           {/* First layer */}
@@ -443,7 +443,7 @@ className="hidden md:block absolute left-0 top-1/2 -translate-y-1/3 h-70 w-[1px]
         }} className="w-px h-40 md:h-90 lg:h-120 xl:h-140 sm:mt-10 bg-[#2F2F2F]"></motion.div > 
     </div>
   {/* <div className="hidden md:block my-6 w-[1px]  h-32 flex-1 bg-gray-600 ml-4"></div> */}
-    <div className=" mx-auto bg-[#1C1C1C]/50  rounded-lg p-8 md:p-12  mb-4 sm:mb-12  shadow-xl">
+    <div className=" mx-auto bg-[#1C1C1C]/50  rounded-lg p-8 md:p-12  mb-4 sm:mb-7  shadow-xl">
         {/* <h2 className="font-title text-3xl font-medium uppercase mb-4  ">
             Space Advantage
         </h2> */}
@@ -506,7 +506,7 @@ className="hidden md:block absolute left-0 top-1/2 -translate-y-1/3 h-70 w-[1px]
     </div>
      <div className="w-full flex justify-center py-10">
    <motion.button
-        className="relative overflow-hidden uppercase px-8 text-xs sm:text-base  py-2 rounded-full border bg-[#666666]/28 border-gray-400  font-body group"
+        className="font-my relative overflow-hidden uppercase px-8 text-xs sm:text-base  py-2 rounded-full border bg-[#666666]/28 border-gray-400  font-body group"
         initial={{ opacity: 0, x: 100 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, amount: 0.1 }}
@@ -533,7 +533,7 @@ className="hidden md:block absolute left-0 top-1/2 -translate-y-1/3 h-70 w-[1px]
         </section>
         <Faq></Faq>
 
-     <section className="relative w-full  flex flex-col items-center justify-center text-center text-white  sm:my-30 ">
+     <section className="relative w-full  flex flex-col items-center justify-center text-center text-white sm:mt-10 sm:mb-30 ">
       {/* Content */}
       <div className="z-10 max-w-4xl flex flex-col  px-6">
         {/* <h2 className="text-4xl md:text-6xl font-medium">

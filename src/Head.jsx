@@ -35,7 +35,7 @@ export default function Head() {
         <div className="flex gap-3">
       <motion.button
               
-                    className="hidden sm:block w-fit relative overflow-hidden shadow-xl shadow-black/30 px-8 text-white uppercase pt-1 pb-2 rounded-full border bg-[#666666]/28 border-gray-400 text-nowrap text-xs/10  sm:text-base font-body group"
+                    className="hidden font-my sm:block w-fit relative overflow-hidden shadow-xl shadow-black/30 px-8 text-white uppercase pt-1 pb-2 rounded-full border bg-[#666666]/28 border-gray-400 text-nowrap text-xs/10  sm:text-base font-body group"
                     initial={{ opacity: 0, x: 100 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true, amount: 0.1 }}
@@ -54,7 +54,7 @@ export default function Head() {
                   </motion.button>
                <motion.button
                onClick={() => setIsOpen(true)}
-                    className="w-fit relative overflow-hidden px-8 text-white shadow-xl shadow-black/30 pt-1 pb-2 rounded-full border bg-[#666666]/28 border-gray-400 text-sm  sm:text-base font-body group"
+                    className="w-fit font-my relative overflow-hidden px-8 text-white shadow-xl shadow-black/30 pt-1 pb-2 rounded-full border bg-[#666666]/28 border-gray-400 text-sm  sm:text-base font-body group"
                     initial={{ opacity: 0, x: 100 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true, amount: 0.1 }}
@@ -94,13 +94,13 @@ export default function Head() {
 
         {/* Center Menu Items */}
         <nav className="flex flex-col items-start uppercase px-15 justify-center flex-1 space-y-6 text-lg   md:text-3xl font-medium ">
-          <a href="#" className="font-title" >Home</a>
-          <a href="#" className="font-title">product</a>
-          <a href="#" className="font-title">Partnership Services</a>
-          <a href="#" className="font-title">News</a>
-          <a href="#" className="font-title">Gallery</a>
-          <a href="#" className="font-title">Video</a>
-           <a href="#" className="font-title">Contact Us</a>
+          <a href="/" className="font-title" >Home</a>
+          <a href="/motor" className="font-title">product</a>
+          <a href="/service" className="font-title">Partnership Services</a>
+          <a href="/new" className="font-title">News</a>
+          <a href="/gallery" className="font-title">Gallery</a>
+          <a href="/video" className="font-title">Video</a>
+           <a href="/contact" className="font-title">Contact Us</a>
         </nav>
 
         {/* Bottom Icons */}

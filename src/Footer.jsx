@@ -72,7 +72,7 @@ const texts = 'Lock in your custom EV motor and be one of the first to experienc
 </h6>
 
                <motion.button
-                    className="w-fit relative overflow-hidden uppercase px-8 text-xs sm:text-base  py-2 rounded-full border bg-[#666666]/28 border-gray-400  font-body group"
+                    className="w-fit font-my relative overflow-hidden uppercase px-8 text-xs sm:text-base  py-2 rounded-full border bg-[#666666]/28 border-gray-400  font-body group"
                     initial={{ opacity: 0, x: 100 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true, amount: 0.1 }}
@@ -110,7 +110,7 @@ const texts = 'Lock in your custom EV motor and be one of the first to experienc
             </button> */}
 
 <motion.button
-                    className=" relative overflow-hidden uppercase px-8 text-xs sm:text-base  py-2 rounded-full border bg-[#666666]/28 border-gray-400  font-body group"
+                    className="font-my relative overflow-hidden uppercase px-8 text-xs sm:text-base  py-2 rounded-full border bg-[#666666]/28 border-gray-400  font-body group"
                     initial={{ opacity: 0, x: -100 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true, amount: 0.1 }}
