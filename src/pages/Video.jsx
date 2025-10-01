@@ -3,18 +3,41 @@ import Head from "../Head"
 import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
 import React, { useState, useEffect } from 'react';
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
 
+// video plugin
+import Video from "yet-another-react-lightbox/plugins/video";
 
 const text = `Engineering in
 Motion`;
 
 
+const videos = [
+  {
+    thumbnail: "/Mask group (68).png",
+    src: "/Mask group (68)-VEED.mp4",
+  },
+  {
+    thumbnail: "/Mask group (69).png",
+    src: "/Mask group (68)-VEED.mp4",
+  },
+  {
+    thumbnail: "/Mask group (70).png",
+    src: "/Mask group (68)-VEED.mp4",
+  },
+  {
+    thumbnail: "/Mask group (71).png",
+    src: "/Mask group (68)-VEED.mp4",
+  },
+];
 
 
 
 
-export default function Contact() {
-   
+export default function Video() {
+    const [open, setOpen] = useState(false);
+  const [index, setIndex] = useState(0);
       useEffect(() => {
         // Set a 2000ms (2 second) delay before automatically turning the lights on.
         const timer = setTimeout(() => {

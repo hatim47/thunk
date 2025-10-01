@@ -286,12 +286,9 @@ export default function Home() {
 <section className="text-white pb-20 md:py-60 px-6 ">
       <div className="max-w-7xl px-6 mx-auto grid md:grid-cols-10 gap-4  sm:gap-7 items-center ">
         
-        {/* Left Column */}
+       
         <div className="text-center  sm:text-left md:col-span-7 ">
-          {/* Title */}
-          {/* <h2 className="font-title text-4xl md:text-5xl mb-6">
-            WHO ARE WE?
-          </h2> */}
+      
 <AnimatedText
   text={`WHO ARE WE?`}
   className="w-full xl:w-5/12 lg:w-7/12 text-3xl md:text-5xl leading-tight"

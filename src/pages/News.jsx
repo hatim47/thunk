@@ -97,7 +97,7 @@ function useMediaQuery(query) {
 
   return matches;
 }
-export default function Motor() {
+export default function News() {
   const isMobile = useMediaQuery("(max-width: 640px)");
       const [isCarLitOnLoad, setIsCarLitOnLoad] = useState(false);
     
@@ -119,11 +119,11 @@ export default function Motor() {
     <>
   <Head></Head>
 
-    <section className="relative flex items-end  h-[60vh]  sm:h-[100vh] w-full px-6  bg-cover bg-center  sm:mb-30"
-      style={{ backgroundImage: "url('/Group 26769.png')" }}>    
+    <section className=" relative -top-25  flex items-end  h-[60vh]  sm:h-[100vh] w-full px-6  bg-cover bg-center  sm:mb-30"
+      style={{ backgroundImage: "url('/Group 26770.png')" }}>    
            
            
-         <section className="relative w-full flex flex-col items-center justify-end text-center text-white sm:pb-30 ">
+         <section className=" relative w-full flex flex-col items-center justify-end text-center text-white sm:pb-30 ">
                             {/* Content */}
                            <div className="z-10 max-w-4xl px-6">
                           <h1 className="text-3xl md:text-6xl font-medium font-title uppercase">
@@ -166,7 +166,69 @@ Preserving Legacy, Powering the Future with EV Innovation                       
                                         </section>
 
 
+<section className="text-white mb-60 md:py-40 px-6 ">
+      <div className="max-w-7xl px-6 mx-auto grid md:grid-cols-10 gap-4  sm:gap-7 items-center ">
+        
+       
+        <div className="text-center  sm:text-left md:col-span-7 ">
+      
+<AnimatedText
+  text={`Driving the\nFuture of EVs`}
+  className="uppercase w-full xl:w-5/12 lg:w-7/12 text-3xl md:text-5xl leading-tight"
+/>
+          {/* Paragraphs */}
+          <motion.p 
+           initial={{ opacity: 0, x: -100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, amount: 0.1 }}
+        transition={{ duration: 1.5, ease: "easeInOut" }}
+        className="font-body text-base sm:text-lg text-gray-300 my-6">
+           Uncover the latest on EV electric motors and the advancement of the electric car conversion motor industry. Stay tuned for news, insights, and breakthroughs shaping the next generation of mobility.
+          </motion.p>
+         
 
+          {/* Button + Line */}
+          <div className="flex items-center max-[431px]:justify-center">
+          
+            <motion.div
+            initial={{ scaleX: 0, opacity: 0 }}
+        whileInView={{ scaleX: 1, opacity: 1 }}
+        viewport={{ once: true, amount: 0.1 }}
+        transition={{
+          duration: 1.5,
+          ease: "easeInOut",
+        }}
+            className="hidden md:block   md:left-[30%]  lg:left-[22%]  xl:left-[27%]  absolute md:w-6/12  lg:w-7/12 xl:w-5/12  h-[1px] flex-1 bg-[#2F2F2F] "></motion.div>
+          </div>
+        </div>
+        {/* Right Column (Image with vertical line) */}
+        <div className="relative flex justify-center md:justify-end">
+          {/* Vertical divider */}
+<motion.div 
+initial={{ scaleY: 0, opacity: 0 }}
+        whileInView={{ scaleY: 1, opacity: 1 }}
+        viewport={{ once: true, amount: 0.1 }}
+        transition={{
+          duration: 1.5,
+          ease: "easeInOut",
+        }}
+className="hidden md:block absolute left-0 top-1/2 -translate-y-1/3 h-70 w-[1px] bg-[#2F2F2F]"></motion.div>
+       </div>
+          {/* Car Image */}
+          <motion.img
+          initial={{ opacity: 1, x: 200 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, amount: 0.1 }}
+        transition={{ duration: 1.5, ease: "easeInOut" }}
+            src="/image 2.png"   // 👉 replace with your transparent car image
+            alt="Classic Car"
+            className="hidden sm:block w-4/12 absolute right-0  md:pl-12 z-2"
+          />
+            <div
+      className={`hidden sm:block absolute right-0 w-[270px] h-[250px] bg-white blur-[180px] rounded-full z-0 transition-opacity duration-2000`}
+    ></div>
+      </div>
+    </section>
    
       <Footer></Footer>
 </>

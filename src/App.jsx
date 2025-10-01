@@ -5,7 +5,8 @@ import Contact from "./pages/Contact";
 import Motor from "./pages/Motor";
 import Servies from "./pages/Servies";
 import News from "./pages/News";
-
+import Gallery from "./pages/Gallery";
+import Video from "./pages/Video";
 export default function App() {
   return (
     <div className="bg-black relative flex w-full flex-col items-center justity-center mx-auto overflow-hidden"> 
@@ -22,6 +23,8 @@ export default function App() {
         <Route path="/motor" element={<Motor />} />
         <Route path="/service" element={<Servies />} />
          <Route path="/new" element={<News />} />
+ <Route path="/gallery" element={<Gallery />} />
+ <Route path="/video" element={<Video />} />
       </Routes>
     </div>
   );

@@ -116,7 +116,7 @@ export default function Servies() {
   return (
     <>
      <Head></Head>
-   <section className="relative flex items-end  h-[60vh]  sm:h-[100vh] w-full px-6  bg-cover bg-center  sm:mb-30"
+   <section className="relative  -top-25 flex items-end  h-[60vh]  sm:h-[100vh] w-full px-6  bg-cover bg-center  sm:mb-30"
     style={{ backgroundImage: "url('/Group 26769.png')" }}>    
          
          

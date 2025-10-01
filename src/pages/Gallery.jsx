@@ -3,18 +3,34 @@ import Head from "../Head"
 import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
 import React, { useState, useEffect } from 'react';
-
-
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
 const text = `Engineering in
 Motion`;
 
+const images = [
+    "/cars/Mask group (58).png",
+    "/cars/Rectangle 85.png",
+    "/cars/Mask group (59).png",
+    "/cars/Mask group (60).png",
+    "/cars/Mask group (61).png",
+    "/cars/Mask group (62).png",
+    "/cars/Mask group (63).png",
+    "/cars/Mask group (64).png",
+    "/cars/Mask group (65).png",
+    "/cars/Mask group (66).png",
+    
+];
 
 
 
 
+export default function Gallery() {
+const [open, setOpen] = useState(false);
+  const [index, setIndex] = useState(0);
 
-export default function Contact() {
-   
+
+    
       useEffect(() => {
         // Set a 2000ms (2 second) delay before automatically turning the lights on.
         const timer = setTimeout(() => {
@@ -34,7 +50,9 @@ export default function Contact() {
   <Head></Head>
 
     <section className=" relative -top-25  flex items-end  h-[60vh]  sm:h-[100vh] w-full px-6  bg-cover bg-center "
-      style={{ backgroundImage: "url('/Group 26772.png')" }}>    
+      style={{ backgroundImage: "url('/Group 26771.png')" }}>    
+           
+           
          <section className=" relative w-full flex flex-col items-center justify-end text-center text-white sm:pb-30 ">
                             {/* Content */}
                            <div className="z-10 max-w-4xl px-6">
@@ -80,59 +98,44 @@ See how best EV motors redefine performance and how THUNK sets the standard for 
 
 
 <section className="max-w-7xl mx-auto px-6 pb-30 sm:pb-60">
-      
-    <div className="flex flex-col gap-6 py-10">
-      {videos.map((video, i) => (
-        <div
-          key={i}
-          className="relative cursor-pointer rounded-lg overflow-hidden group"
-          onClick={() => {
-            setIndex(i);
-            setOpen(true);
-          }}
-        >
-          {/* Thumbnail */}
-          <img
-            src={video.thumbnail}
-            alt={`Video ${i + 1}`}
-            className="w-full h-auto object-cover"
-          />
-
-          {/* Play Button Overlay */}
-          <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition">
-            <div className="w-16 h-16 bg-white/80 rounded-full flex items-center justify-center">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="black"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="black"
-                className="w-8 h-8 ml-1"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M5.25 5.25v13.5l13.5-6.75-13.5-6.75z"
-                />
-              </svg>
-            </div>
+      {/* Masonry-style grid */}
+  
+    
+      <div className="w-full grid grid-cols-12 gap-4 sm:gap-9 auto-rows-[200px]  sm:auto-rows-[390px]">
+        {images.map((src, i) => (
+          <div
+            key={i}
+            className={`overflow-hidden rounded-lg cursor-pointer ${
+              i < 3
+                ? "col-span-6 sm:col-span-4"
+                : i < 5
+                ? "col-span-6"
+                : i < 8
+                ? "col-span-6 sm:col-span-4"
+                : "col-span-6"
+            }`}
+            onClick={() => {
+              setIndex(i);
+              setOpen(true);
+            }}
+          >
+            <img
+              src={src}
+              alt={`Car ${i}`}
+              className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+            />
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
+   
 
-      {/* Lightbox with video support */}
+      {/* Lightbox */}
       <Lightbox
         open={open}
         index={index}
         close={() => setOpen(false)}
-        plugins={[Video]}
-        slides={videos.map((v) => ({
-          type: "video",
-          sources: [{ src: v.src }],
-        }))}
+        slides={images.map((src) => ({ src }))}
       />
-    </div>
-    
     </section>
       <Footer></Footer>
 </>
