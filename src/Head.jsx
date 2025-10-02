@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 export default function Head() {
   const [isOpen, setIsOpen] = useState(false);
  const [show, setShow] = useState(false);
@@ -94,13 +95,13 @@ export default function Head() {
 
         {/* Center Menu Items */}
         <nav className="flex flex-col items-start uppercase px-15 justify-center flex-1 space-y-6 text-lg   md:text-3xl font-medium ">
-          <a href="/" className="font-title" >Home</a>
-          <a href="/motor" className="font-title">product</a>
-          <a href="/service" className="font-title">Partnership Services</a>
-          <a href="/new" className="font-title">News</a>
-          <a href="/gallery" className="font-title">Gallery</a>
-          <a href="/video" className="font-title">Video</a>
-           <a href="/contact" className="font-title">Contact Us</a>
+        <Link to="/" className="font-title">Home</Link>
+  <Link to="/motor" className="font-title">Product</Link>
+  <Link to="/service" className="font-title">Partnership Services</Link>
+  <Link to="/new" className="font-title">News</Link>
+  <Link to="/gallery" className="font-title">Gallery</Link>
+  <Link to="/video" className="font-title">Video</Link>
+  <Link to="/contact" className="font-title">Contact Us</Link>
         </nav>
 
         {/* Bottom Icons */}
