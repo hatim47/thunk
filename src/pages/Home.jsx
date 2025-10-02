@@ -4,7 +4,7 @@ import Footer from "../Footer"
 import Head from "../Head"
 import React, { useState, useEffect } from 'react';
 import { motion } from "framer-motion";
-
+import { Link } from "react-router-dom";
 const text = `REDEFINING CLASSIC
  CAR CONVERSIONS`;
 
@@ -329,6 +329,7 @@ export default function Home() {
 
           {/* Button + Line */}
           <div className="flex items-center max-[431px]:justify-center">
+           <Link to="/motor">
             <motion.a 
              href="/motor"
              initial={{ opacity: 0, x: -100 }}
@@ -349,6 +350,7 @@ export default function Home() {
           </span>
         </span>        
             </motion.a>
+</Link>
             <motion.div
             initial={{ scaleX: 0, opacity: 0 }}
         whileInView={{ scaleX: 1, opacity: 1 }}
