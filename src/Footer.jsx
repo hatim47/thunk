@@ -95,22 +95,22 @@ const texts = 'Lock in your custom EV motor and be one of the first to experienc
 
     </section>
     <footer className="bg-black w-full text-gray-400 py-10 mt-16 flex flex-col justify-center items-center">
-      <div className="w-full max-w-7xl px-6 flex flex-col sm:flex-row  justify-between ">
+      <div className="w-full max-w-7xl px-6 lg:px-0 flex flex-col sm:flex-row  justify-between ">
         
         {/* Left Section */}
         <div className="">
-          <h2 className="text-4xl font-title uppercase font-medium text-white mb-3 tracking-wider">Stay Updated</h2>
-          <p className=" leading-relaxed">
+          <h2 className="text-3xl sm:text-5xl font-title uppercase font-medium text-white mb-3 tracking-wider">Stay Updated</h2>
+          <p className=" leading-relaxed  text-base sm:text-xl">
            We promise not to flood your inbox.
           </p>
           <form action="" className="flex flex-col gap-3 py-4">
-          <input type="text" placeholder="Enter your email" className="border-b  border-white  focus:border-b active:border-b focus-visible:border-b outline-0" />
+          <input type="text" placeholder="Enter your email" className="border-b  pb-2 border-white text-base sm:text-xl focus:border-b active:border-b focus-visible:border-b outline-0" />
    {/* <button className="px-6 py-2 rounded-full border uppercase border-gray-400 text-sm font-body hover:bg-gray-200 hover:text-black transition">
               Submit now  •
             </button> */}
 
 <motion.button
-                    className="font-my relative overflow-hidden uppercase px-8 text-xs sm:text-base  py-2 rounded-full border bg-[#666666]/28 border-gray-400  font-body group"
+                    className="font-my text-white/70 relative overflow-hidden uppercase px-8 text-xs sm:text-base  py-2 rounded-full border bg-[#666666]/28 border-gray-400  font-body group"
                     initial={{ opacity: 0, x: -100 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true, amount: 0.1 }}
@@ -133,30 +133,30 @@ const texts = 'Lock in your custom EV motor and be one of the first to experienc
 <div className=" flex gap-8 sm:gap-20">
         {/* Middle Section (Links) */}
         <div className="flex flex-col space-y-2 ">
-          <h3 className="text-lg sm:text-xl font-title uppercase font-medium text-white mb-2 ">Quick Links</h3>
-          <a href="#" className="hover:text-white  text-[#757575]  transition">Home</a>
-          <a href="#" className="hover:text-white  text-[#757575] transition">About US</a>
-          <a href="#" className="hover:text-white  text-[#757575] transition">Services</a>
-            <a href="#" className="hover:text-white  text-[#757575] transition">Products</a>
-          <a href="#" className="hover:text-white  text-[#757575] transition">Contact</a>
+          <h3 className="text-lg sm:text-2xl font-title uppercase font-medium text-white mb-2 ">Quick Links</h3>
+          <a href="#" className="hover:text-white text-base sm:text-lg  text-[#757575]  transition">Home</a>
+          <a href="#" className="hover:text-white text-base sm:text-lg text-[#757575] transition">About US</a>
+          <a href="#" className="hover:text-white text-base sm:text-lg text-[#757575] transition">Services</a>
+            <a href="#" className="hover:text-white text-base sm:text-lg text-[#757575] transition">Products</a>
+          <a href="#" className="hover:text-white text-base sm:text-lg text-[#757575] transition">Contact</a>
         </div>
 
         {/* Right Section (Socials) */}
-        <div className="flex flex-col gap-6 ">
+        <div className="flex flex-col gap-8">
               <div className="flex   gap-10 sm:gap-20">
                  <div className="flex flex-col space-y-2">
-          <h3 className="text-lg sm:text-xl font-title uppercase font-medium text-white mb-2">Media</h3>
-          <a href="#" className="hover:text-white  text-[#757575] transition">News</a>
-          <a href="#" className="hover:text-white  text-[#757575] transition">Gallery</a>
-          <a href="#" className="hover:text-white  text-[#757575] transition">Videos</a>
+          <h3 className="text-lg sm:text-2xl font-title uppercase font-medium text-white mb-2">Media</h3>
+          <a href="#" className="hover:text-white text-base sm:text-lg  text-[#757575] transition">News</a>
+          <a href="#" className="hover:text-white text-base sm:text-lg  text-[#757575] transition">Gallery</a>
+          <a href="#" className="hover:text-white text-base sm:text-lg text-[#757575] transition">Videos</a>
         
         </div>
             
             
               <div className="flex flex-col space-y-2">
-          <h3 className="text-lg sm:text-xl font-title uppercase font-medium text-white mb-2">Legal</h3>
-          <a href="#" className="hover:text-white  text-[#757575] transition">Terms & Condition</a>
-          <a href="#" className="hover:text-white  text-[#757575] transition">Privacy Policy</a>
+          <h3 className="text-lg sm:text-2xl font-title uppercase font-medium text-white mb-2">Legal</h3>
+          <a href="#" className="hover:text-white text-base sm:text-lg text-[#757575] transition">Terms & Condition</a>
+          <a href="#" className="hover:text-white text-base sm:text-lg text-[#757575] transition">Privacy Policy</a>
        
         </div>
 </div>
@@ -181,7 +181,7 @@ const texts = 'Lock in your custom EV motor and be one of the first to experienc
         </div>
       </div>
  </div>
-      <p className="mt-10 text-center text-sm text-gray-500">
+      <p className="mt-10 text-center text-baes text-gray-500">
         © {new Date().getFullYear()} CarShowcase. All rights reserved.
       </p>
     </footer>

@@ -9,8 +9,8 @@ import "yet-another-react-lightbox/styles.css";
 // video plugin
 import Video from "yet-another-react-lightbox/plugins/video";
 
-const text = `Engineering in
-Motion`;
+const text = `Electric Car Conversion
+Motor in Action`;
 
 
 const videos = [
@@ -61,7 +61,7 @@ export default function Videos() {
          <section className=" relative w-full flex flex-col items-center justify-end text-center text-white sm:pb-30 ">
                             {/* Content */}
                            <div className="z-10 max-w-4xl px-6">
-                          <h1 className="text-3xl md:text-6xl font-medium font-title uppercase">
+                          <h1 className="text-3xl md:text-7xl font-medium font-title uppercase">
                                {lines.map((line, lineIndex) => {
                               const letters = Array.from(line);
                               return (
@@ -92,7 +92,7 @@ export default function Videos() {
                                        transition={{ duration: 1.5, ease: "easeInOut" }}
                         
                         className="text-sm mt-6 sm:text-lg ">
-See how best EV motors redefine performance and how THUNK sets the standard for the best electric motor for classic cars.                    </motion.p>
+Watch our process come alive as we demonstrate the power and precision of a custom electric car motor designed for seamless integration.                    </motion.p>
                         </div>
                     
                         

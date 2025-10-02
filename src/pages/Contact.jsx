@@ -84,8 +84,8 @@ const handleSubmit = (e) => {
                                         </section>
                                           <section className=" relative w-full flex flex-col items-center justify-end text-center text-white sm:pb-30 ">
                             {/* Content */}
-                           <div className="z-10 max-w-5xl px-6">
-                          <h1 className="text-3xl md:text-6xl font-medium font-title uppercase">
+                           <div className="z-10 max-w-6xl px-6">
+                          <h1 className="text-3xl md:text-7xl font-medium font-title uppercase">
                                {lines.map((line, lineIndex) => {
                               const letters = Array.from(line);
                               return (
@@ -115,7 +115,7 @@ const handleSubmit = (e) => {
                                        viewport={{ once: true, amount: 0.1 }}
                                        transition={{ duration: 1.5, ease: "easeInOut" }}
                         
-                        className="px-7 text-sm mt-6 sm:text-lg ">
+                        className="px-7 text-sm mt-6 sm:text-xl ">
 Whether you are examining your first EV conversion motor, searching for a suitable electric EV motor for your project, or looking to collaborate with us, THUNK is here to help. We bring expertise, inventiveness, and support to guide you every step of the way.                  </motion.p>
                         </div>
                     
@@ -132,14 +132,14 @@ Whether you are examining your first EV conversion motor, searching for a suitab
       {/* Heading */}
                <AnimatedText
         text={`Get In Touch`}
-        className="text-xl text-center pb-10 sm:text-3xl uppercase"
+        className="text-2xl text-center pb-10 sm:text-3xl uppercase"
       />
 
       <form onSubmit={handleSubmit} className="space-y-6 max-[391px]:text-center ">
         {/* Two-Column Group: First Name & Last Name */}
         <div className="flex flex-col sm:flex-row gap-6">
           <div className="flex-1">
-            <label htmlFor="firstName" className="block text-[#757575] text-sm font-medium mb-2">
+            <label htmlFor="firstName" className="block text-[#757575] text-base font-medium mb-2">
               First Name
             </label>
             <input
@@ -149,7 +149,7 @@ Whether you are examining your first EV conversion motor, searching for a suitab
             />
           </div>
           <div className="flex-1">
-            <label htmlFor="lastName" className="block text-[#757575] text-sm font-medium mb-2">
+            <label htmlFor="lastName" className="block text-[#757575] text-base font-medium mb-2">
               Last Name
             </label>
             <input
@@ -163,7 +163,7 @@ Whether you are examining your first EV conversion motor, searching for a suitab
         {/* Two-Column Group: Email & Phone Number */}
         <div className="flex flex-col sm:flex-row gap-6">
           <div className="flex-1">
-            <label htmlFor="email" className="block text-[#757575] text-sm font-medium mb-2">
+            <label htmlFor="email" className="block text-[#757575] text-base font-medium mb-2">
               Email
             </label>
             <input
@@ -173,7 +173,7 @@ Whether you are examining your first EV conversion motor, searching for a suitab
             />
           </div>
           <div className="flex-1">
-            <label htmlFor="phone" className="block text-[#757575] text-sm font-medium mb-2">
+            <label htmlFor="phone" className="block text-[#757575] text-base font-medium mb-2">
               Phone Number
             </label>
             <input
@@ -186,7 +186,7 @@ Whether you are examining your first EV conversion motor, searching for a suitab
 
         {/* Full-Width Message Textarea */}
         <div>
-          <label htmlFor="message" className="block text-[#757575] text-sm font-medium mb-2">
+          <label htmlFor="message" className="block text-[#757575] text-base font-medium mb-2">
             Message
           </label>
           <textarea
@@ -223,8 +223,8 @@ Whether you are examining your first EV conversion motor, searching for a suitab
       </span>
 
       {/* Contact Email */}
-      <div className="flex items-center justify-center gap-2 text-[#757575] text-sm">
-     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 51 51" fill="none">
+      <div className="flex items-center justify-center gap-2 text-[#757575] text-lg">
+     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 51 51" fill="none">
 <path d="M42.5 8.5H8.5C6.1625 8.5 4.27125 10.4125 4.27125 12.75L4.25 38.25C4.25 40.5875 6.1625 42.5 8.5 42.5H42.5C44.8375 42.5 46.75 40.5875 46.75 38.25V12.75C46.75 10.4125 44.8375 8.5 42.5 8.5ZM41.65 17.5312L26.6262 26.9237C25.9462 27.3488 25.0538 27.3488 24.3738 26.9237L9.35 17.5312C9.13692 17.4116 8.95033 17.25 8.80151 17.0562C8.6527 16.8624 8.54476 16.6404 8.48422 16.4037C8.42369 16.1669 8.41182 15.9204 8.44933 15.6789C8.48685 15.4374 8.57296 15.2061 8.70247 14.9989C8.83198 14.7917 9.00219 14.6129 9.20279 14.4734C9.4034 14.3338 9.63023 14.2365 9.86955 14.1871C10.1089 14.1378 10.3557 14.1376 10.5952 14.1864C10.8346 14.2352 11.0616 14.3321 11.2625 14.4713L25.5 23.375L39.7375 14.4713C39.9384 14.3321 40.1654 14.2352 40.4048 14.1864C40.6443 14.1376 40.8911 14.1378 41.1304 14.1871C41.3698 14.2365 41.5966 14.3338 41.7972 14.4734C41.9978 14.6129 42.168 14.7917 42.2975 14.9989C42.427 15.2061 42.5132 15.4374 42.5507 15.6789C42.5882 15.9204 42.5763 16.1669 42.5158 16.4037C42.4552 16.6404 42.3473 16.8624 42.1985 17.0562C42.0497 17.25 41.8631 17.4116 41.65 17.5312Z" fill="url(#paint0_linear_172_1039)"/>
 <defs>
 <linearGradient id="paint0_linear_172_1039" x1="25.5" y1="8.5" x2="25.5" y2="42.5" gradientUnits="userSpaceOnUse">

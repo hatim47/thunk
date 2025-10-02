@@ -3,8 +3,8 @@ import Head from "../Head"
 import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
 import React, { useState, useEffect } from 'react';
-const text = `The THUNK 3
-At a Glance`;
+const text = `Partner
+with THUNK`;
 const BASE_DELAY = 2.5;
 const letterVariant = {
   hidden: { opacity: 0, y: -30 },
@@ -154,7 +154,7 @@ export default function Servies() {
                                      transition={{ duration: 1.5, ease: "easeInOut" }}
                       
                       className="text-sm mt-6 sm:text-lg ">
-                          Every classic car has a story worth continuing, and the Thunk3 makes that possible. Built as an EV conversion motor, it slips neatly into the transmission tunnel while unlocking the power and efficiency of Tesla technology.
+                          The future of classic cars is electric, and we’re building it together!
                           </motion.p>
                       </div>
                   
@@ -215,14 +215,14 @@ export default function Servies() {
         duration: 1.5,
         ease: "easeInOut",
       }}
-       className={`absolute top-30  right-20 w-[100px] h-[130px]  md:w-[300px]  xl:h-[200px] bg-white blur-[200px] rounded-full z-0 transition-opacity duration-2000`}
+       className={`absolute top-30  right-6 w-[100px] h-[130px]  md:w-[420px]  xl:h-[280px] bg-white blur-[100px] rounded-full z-0 transition-opacity duration-2000`}
         ></motion.div>
                 </div>             
 
         </div>
 
 </section>
-<section className="relative w-full  flex flex-col gap-4  items-center justify-end text-center text-white sm:my-50  ">
+<section className="relative w-full flex flex-col gap-4 items-center justify-end text-center text-white sm:my-50  ">
 
 <div className="px-6">
              <AnimatedText
@@ -230,8 +230,15 @@ export default function Servies() {
         className="text-xl  sm:text-6xl uppercase"
       />
 </div>
-<div className="max-w-7xl px-6 grid grid-cols-1 sm:grid-cols-3 gap-10 mt-6">
-  <div className="rounded-xl text-sm sm:text-lg flex flex-col gap-4 items-center px-8 py-6"
+<div className="max-w-7xl px-6 grid grid-cols-1 sm:grid-cols-3 gap-8 mt-6">
+    <motion.div 
+                   initial={{ opacity: 0, y: 40 }}          // hidden + pushed down
+      whileInView={{ opacity: 1, y: 0 }}       // visible + natural place
+      viewport={{ once: true, amount: 0.1 }}   // trigger on scroll, only once
+      transition={{
+        duration: 1.5,
+        ease: "easeInOut",
+      }} className="rounded-xl text-sm sm:text-xl flex flex-col gap-4 items-center px-6 py-6"
     style={{
       background:
         "linear-gradient(180deg, rgba(56,56,56,0.5) 0%, rgba(28,28,28,0.5) 100%)",
@@ -239,9 +246,16 @@ export default function Servies() {
   >
     <img src="/Mask group (55).png" className="w-fit" alt="" />
     <p>Competitive discounts on our motor package.</p>
-  </div>
+  </motion.div>
 
-  <div className="rounded-xl text-sm sm:text-lg flex flex-col gap-4 items-center px-8 py-6"
+    <motion.div 
+                   initial={{ opacity: 0, y: 40 }}          // hidden + pushed down
+      whileInView={{ opacity: 1, y: 0 }}       // visible + natural place
+      viewport={{ once: true, amount: 0.1 }}   // trigger on scroll, only once
+      transition={{
+        duration: 1.6,
+        ease: "easeInOut",
+      }} className="rounded-xl text-sm sm:text-xl flex flex-col gap-4 items-center px-6 py-6"
     style={{
       background:
         "linear-gradient(180deg, rgba(56,56,56,0.5) 0%, rgba(28,28,28,0.5) 100%)",
@@ -249,9 +263,16 @@ export default function Servies() {
   >
     <img src="/Mask group (56).png" className="w-fit" alt="" />
     <p>Direct engineering expertise and basic support.</p>
-  </div>
+  </motion.div>
 
-  <div className="rounded-xl text-sm sm:text-lg flex flex-col gap-4 items-center px-8 py-6"
+    <motion.div 
+                   initial={{ opacity: 0, y: 40 }}          // hidden + pushed down
+      whileInView={{ opacity: 1, y: 0 }}       // visible + natural place
+      viewport={{ once: true, amount: 0.1 }}   // trigger on scroll, only once
+      transition={{
+        duration: 1.7,
+        ease: "easeInOut",
+      }} className="rounded-xl text-sm sm:text-xl flex flex-col gap-4 items-center px-6 py-6"
     style={{
       background:
         "linear-gradient(180deg, rgba(56,56,56,0.5) 0%, rgba(28,28,28,0.5) 100%)",
@@ -262,7 +283,7 @@ export default function Servies() {
       Access to reliable EV conversion technology designed for seamless
       integration.
     </p>
-  </div>
+  </motion.div>
 </div>
 
 
@@ -315,7 +336,7 @@ export default function Servies() {
         <div className="flex w-full items-center justify-center md:justify-end  mb-6">
       
            <motion.div
-        className="h-[1px] w-6/12 bg-[#2F2F2F]"
+        className="h-[1px] w-7/12 bg-[#2F2F2F]"
         initial={{ scaleX: 0, opacity: 0 }}
         whileInView={{ scaleX: 1, opacity: 1 }}
         viewport={{ once: true, amount: 0.1 }}
@@ -356,7 +377,7 @@ export default function Servies() {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, amount: 0.1 }}
         transition={{ duration: 1.5, ease: "easeInOut" }}
-        className="font-body text-gray-300 text-base sm:text-lg leading-relaxed">
+        className="font-body text-gray-300 text-base sm:text-xl leading-relaxed">
         The demand for EV conversion partnerships is growing worldwide.
         With THUNK’s technology and expertise, your business can stay
         competitive while helping more drivers embrace sustainable performance
@@ -367,8 +388,8 @@ export default function Servies() {
         viewport={{ once: true, amount: 0.1 }}
         transition={{ duration: 1.5, ease: "easeInOut" }}
 className="flex flex-col sm:flex-row my-3 gap-3 sm:gap-6 uppercase ">
-   <span className="font-title text-sm sm:text-xl">• Car Conversion Shops</span> 
-    <span className="font-title text-sm sm:text-xl">• Classic Car Restorers</span> 
+   <span className="font-title text-sm sm:text-2xl">• Car Conversion Shops</span> 
+    <span className="font-title text-sm sm:text-2xl">• Classic Car Restorers</span> 
 </motion.div>
 
       </div>

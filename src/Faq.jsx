@@ -78,19 +78,19 @@ const AccordionItem = ({ id, question, answer, activeId, onToggle }) => {
 
   return (
     <div
-      className="mb-5 rounded-xl shadow-2xl transition-all duration-300 transform hover:scale-[1.020]"
+      className="mb-5 rounded-xl shadow-lg shadow-gray-400/10 scale-[0.980] transition-all duration-300 transform hover:scale-[1]"
       style={{
         // Custom gradient/box shadow to achieve the deep, glossy black look from the image
-        background: 'linear-gradient(145deg, #1e1e1e, #0e0e0e)',
-        boxShadow: '0 4px 6px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05)',
+        background: 'linear-gradient(180deg, rgba(102, 102, 102, 0.5) 0%, rgba(28, 28, 28, 0.5) 77.69%)',
+        
       }}
     >
       {/* Accordion Header/Button */}
       <button
-        className="w-full flex justify-between items-center p-6 text-left font-inter text-sm sm:text-lg uppercase tracking-wide text-[#FAF9F6] focus:outline-none"
+        className="w-full flex justify-between items-center p-6 text-left text-sm sm:text-xl uppercase tracking-wide text-[#FAF9F6] font-my "
         onClick={() => onToggle(id)}
       >
-        <span>{question}</span>
+        <span className=' ms-5 w-6/12'>{question}</span>
         {ArrowIcon}
       </button>
 

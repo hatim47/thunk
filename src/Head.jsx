@@ -22,9 +22,9 @@ export default function Head() {
 
 
         {/* Logo */}
-        <div className="text-xl font-bold text-gray-800">
-          <img src="/Layer_1.png" className="w-5/12  sm:w-8/12" alt="Logo" />
-        </div>
+        <Link to="/" className="text-xl font-bold text-gray-800">
+          <img src="/Layer_1.png" className="w-5/12  sm:w-9/12" alt="Logo" />
+        </Link>
 
         {/* Menu Button */}
         {/* <button
@@ -36,13 +36,13 @@ export default function Head() {
         <div className="flex gap-3">
       <motion.button
               
-                    className="hidden font-my sm:block w-fit relative overflow-hidden shadow-xl shadow-black/30 px-8 text-white uppercase pt-1 pb-2 rounded-full border bg-[#666666]/28 border-gray-400 text-nowrap text-xs/10  sm:text-base font-body group"
+                    className="hidden font-my sm:block w-fit relative overflow-hidden shadow-xl shadow-black/30 px-8 text-white uppercase py-2 rounded-full border bg-[#666666]/28 border-gray-400 text-nowrap text-xs/10  sm:text-lg font-body group"
                     initial={{ opacity: 0, x: 100 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true, amount: 0.1 }}
                     transition={{ duration: 1.5, ease: "easeInOut" }}
                   >
-                    <span className="block h-[1.5em] sm:h-[1em] overflow-hidden">
+                    <span className="block h-[1.5em] sm:h-[1.2em] overflow-hidden">
                       {/* First layer */}
                       <span className="block transition-transform duration-500 ease-in-out group-hover:-translate-y-full">
                        let’s talk  •
@@ -55,13 +55,13 @@ export default function Head() {
                   </motion.button>
                <motion.button
                onClick={() => setIsOpen(true)}
-                    className="w-fit font-my relative overflow-hidden px-8 text-white shadow-xl shadow-black/30 pt-1 pb-2 rounded-full border bg-[#666666]/28 border-gray-400 text-sm  sm:text-base font-body group"
+                    className="w-fit font-my relative overflow-hidden px-8 text-white shadow-xl shadow-black/30 py-2 rounded-full border bg-[#666666]/28 border-gray-400 text-sm  sm:text-lg font-body group"
                     initial={{ opacity: 0, x: 100 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true, amount: 0.1 }}
                     transition={{ duration: 1.5, ease: "easeInOut" }}
                   >
-                    <span className="block h-[1em] overflow-hidden">
+                    <span className="block h-[1.2em] overflow-hidden">
                       {/* First layer */}
                       <span className="block transition-transform duration-500 ease-in-out group-hover:-translate-y-full">
                        MENU  •

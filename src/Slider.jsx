@@ -149,7 +149,7 @@ const goToSlide = useCallback((index, smooth = true) => {
 
   return (
     <div className=" bg-black flex flex-col items-center justify-center pt-20 pb-10 px-4  font-inter">
-      <div className="w-full max-w-7xl">
+      <div className="w-full max-w-[1600px] ">
       
         <div 
           className="relative overflow-hidden rounded-xl shadow-2xl select-none cursor-grab active:cursor-grabbing"

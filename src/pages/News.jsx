@@ -126,7 +126,7 @@ export default function News() {
          <section className=" relative w-full flex flex-col items-center justify-end text-center text-white sm:pb-30 ">
                             {/* Content */}
                            <div className="z-10 max-w-4xl px-6">
-                          <h1 className="text-3xl md:text-6xl font-medium font-title uppercase">
+                          <h1 className="text-3xl md:text-7xl font-medium font-title uppercase">
                                {lines.map((line, lineIndex) => {
                               const letters = Array.from(line);
                               return (
@@ -166,23 +166,33 @@ Preserving Legacy, Powering the Future with EV Innovation                       
                                         </section>
 
 
-<section className="text-white mb-60 md:py-40 px-6 ">
-      <div className="max-w-7xl px-6 mx-auto grid md:grid-cols-10 gap-4  sm:gap-7 items-center ">
+<section className="text-white mb-40 md:py-40 px-6 ">
+      <div className="max-w-7xl px-6 sm:px-20 mx-auto grid md:grid-cols-10 gap-4  sm:gap-7 items-center ">
         
        
-        <div className="text-center  sm:text-left md:col-span-7 ">
+        <div className="text-center  sm:text-left md:col-span-5">
       
 <AnimatedText
   text={`Driving the\nFuture of EVs`}
-  className="uppercase w-full xl:w-5/12 lg:w-7/12 text-3xl md:text-5xl leading-tight"
+  className="uppercase w-full xl:w-10/12 lg:w-7/12 text-3xl md:text-6xl leading-tight"
 />
+
+   <motion.img
+          initial={{ opacity: 1, x: 200 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, amount: 0.1 }}
+        transition={{ duration: 1.5, ease: "easeInOut" }}
+            src="/image 2.png"   // 👉 replace with your transparent car image
+            alt="Classic Car"
+            className="sm:hidden block w-12/12 relative -right-10 my-10  z-0"
+          />
           {/* Paragraphs */}
           <motion.p 
            initial={{ opacity: 0, x: -100 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, amount: 0.1 }}
         transition={{ duration: 1.5, ease: "easeInOut" }}
-        className="font-body text-base sm:text-lg text-gray-300 my-6">
+        className="font-body text-base sm:text-xl text-gray-300 my-6 ">
            Uncover the latest on EV electric motors and the advancement of the electric car conversion motor industry. Stay tuned for news, insights, and breakthroughs shaping the next generation of mobility.
           </motion.p>
          
@@ -198,11 +208,11 @@ Preserving Legacy, Powering the Future with EV Innovation                       
           duration: 1.5,
           ease: "easeInOut",
         }}
-            className="hidden md:block   md:left-[30%]  lg:left-[22%]  xl:left-[27%]  absolute md:w-6/12  lg:w-7/12 xl:w-5/12  h-[1px] flex-1 bg-[#2F2F2F] "></motion.div>
+            className="hidden md:block   md:left-[30%]  lg:left-[22%]  xl:left-[27%]  absolute md:w-6/12  lg:w-7/12 xl:w-4/12  h-[1px] flex-1 bg-[#2F2F2F] "></motion.div>
           </div>
         </div>
         {/* Right Column (Image with vertical line) */}
-        <div className="relative flex justify-center md:justify-end">
+        <div className="relative flex justify-center md:justify-end ">
           {/* Vertical divider */}
 <motion.div 
 initial={{ scaleY: 0, opacity: 0 }}
@@ -212,7 +222,7 @@ initial={{ scaleY: 0, opacity: 0 }}
           duration: 1.5,
           ease: "easeInOut",
         }}
-className="hidden md:block absolute left-0 top-1/2 -translate-y-1/3 h-70 w-[1px] bg-[#2F2F2F]"></motion.div>
+className="hidden md:block absolute left-20 top-1/2 -translate-y-1/3 h-80 w-[1px] bg-[#2F2F2F]"></motion.div>
        </div>
           {/* Car Image */}
           <motion.img
@@ -222,7 +232,7 @@ className="hidden md:block absolute left-0 top-1/2 -translate-y-1/3 h-70 w-[1px]
         transition={{ duration: 1.5, ease: "easeInOut" }}
             src="/image 2.png"   // 👉 replace with your transparent car image
             alt="Classic Car"
-            className="hidden sm:block w-4/12 absolute right-0  md:pl-12 z-2"
+            className="hidden sm:block w-5/12 absolute right-0   z-2"
           />
             <div
       className={`hidden sm:block absolute right-0 w-[270px] h-[250px] bg-white blur-[180px] rounded-full z-0 transition-opacity duration-2000`}

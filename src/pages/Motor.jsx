@@ -180,7 +180,7 @@ export default function Motor() {
              <section className="relative w-full flex flex-col items-center justify-center text-center text-white pt-10  sm:pt-20 sm:pb-60 ">
                     {/* Content */}
                    <div className="z-10 max-w-4xl px-6">
-                  <h1 className="text-3xl md:text-6xl font-medium font-title uppercase">
+                  <h1 className="text-3xl md:text-7xl font-medium font-title uppercase">
                        {lines.map((line, lineIndex) => {
                       const letters = Array.from(line);
                       return (
@@ -204,7 +204,7 @@ export default function Motor() {
                     })}      
                   </h1>
             
-                <p className="text-sm mt-6 sm:text-lg ">
+                <p className="text-base sm:text-xl mt-6 ">
                     Every classic car has a story worth continuing, and the Thunk3 makes that possible. Built as an EV conversion motor, it slips neatly into the transmission tunnel while unlocking the power and efficiency of Tesla technology.
                     </p>
                 </div>
@@ -231,7 +231,7 @@ export default function Motor() {
 
  <AnimatedText
         text={`Key Features of the THUNK 3 EV\nConversion Motor`}
-        className="text-2xl mt-6 sm:text-5xl uppercase"
+        className="text-2xl mt-6 sm:text-6xl uppercase"
       />
 
                    </section>
@@ -248,7 +248,7 @@ export default function Motor() {
         duration: 1.5,
         ease: "easeInOut",
       }}
-       className={`absolute top-60 left-[30%]  w-[100px] h-[130px]  md:w-[300px] xl:w-[600px] xl:h-[250px] bg-white blur-[300px] rounded-full z-0 transition-opacity duration-2000`}
+       className={`absolute top-60 left-[35%]  w-[100px] h-[130px]  md:w-[300px] xl:w-[600px] xl:h-[250px] bg-white blur-[200px] rounded-full z-0 transition-opacity duration-2000`}
         ></motion.div>
      <div className="relative grid md:grid-cols-10  gap-6 max-w-7xl mx-auto z-2">
        
@@ -265,7 +265,7 @@ export default function Motor() {
                  <div className="flex justify-between items-center">
               <AnimatedText
         text={`High Power in a\nCompact Package`}
-        className="text-lg mt-6 sm:text-3xl uppercase"
+        className="text-lg  sm:text-4xl uppercase"
       />
 
        <div className="   w-12 h-12 flex items-center justify-center  rounded-full bg-[#A61313]/50 border-2 border-[#A61313] text-white font-bold">
@@ -277,7 +277,7 @@ export default function Motor() {
 </div>
 
 
-              <p className="text-sm text-gray-300">EV conversion motor produces 220+ kW (≈300 HP), delivering instant torque and prompt  acceleration.</p>
+              <p className="mt-6 text-base sm:text-xl text-gray-300">EV conversion motor produces 220+ kW (≈300 HP), delivering instant torque and prompt  acceleration.</p>
             </div>
 
             {/* Number badge */}
@@ -296,8 +296,8 @@ export default function Motor() {
             <div>
                     <div className="flex justify-between items-center">
               <AnimatedText
-        text={`High Power in a\nCompact Package`}
-        className="text-lg mt-6 sm:text-3xl uppercase"
+        text={`Compact\nPackage`}
+        className="text-lg sm:text-4xl uppercase"
       />
 
        <div className="   w-12 h-12 flex items-center justify-center  rounded-full bg-[#A61313]/50 border-2 border-[#A61313] text-white font-bold">
@@ -307,7 +307,7 @@ export default function Motor() {
       />
             </div>
 </div>
-              <p className="text-sm text-gray-300">
+              <p className="mt-6 text-base  sm:text-xl text-gray-300">
 Designed to mount in the transmission tunnel, keeping the engine bay free for batteries and system components.                </p>
             </div>
 
@@ -328,7 +328,7 @@ Designed to mount in the transmission tunnel, keeping the engine bay free for ba
                  <div className="flex justify-between items-center">
               <AnimatedText
         text={`Package\nIncludes`}
-        className="text-lg mt-6 sm:text-3xl uppercase"
+        className="text-lg  sm:text-4xl uppercase"
       />
 
        <div className="   w-12 h-12 flex items-center justify-center  rounded-full bg-[#A61313]/50 border-2 border-[#A61313] text-white font-bold">
@@ -340,7 +340,7 @@ Designed to mount in the transmission tunnel, keeping the engine bay free for ba
 </div>
 
 
-              <p className="text-sm text-gray-300">
+              <p className="mt-6 text-base sm:text-xl text-gray-300">
               Motor with integrated TorqueTrends gear reduction system, inverter, and oil pump with filter.
                 
                 </p>
@@ -363,7 +363,7 @@ Designed to mount in the transmission tunnel, keeping the engine bay free for ba
                     <div className="flex justify-between items-center">
               <AnimatedText
         text={`Optimized\nBalance`}
-        className="text-lg mt-6 sm:text-3xl uppercase"
+        className="text-lg  sm:text-4xl uppercase"
       />
 
        <div className="   w-12 h-12 flex items-center justify-center  rounded-full bg-[#A61313]/50 border-2 border-[#A61313] text-white font-bold">
@@ -373,7 +373,7 @@ Designed to mount in the transmission tunnel, keeping the engine bay free for ba
       />
             </div>
 </div>
-              <p className="text-sm text-gray-300">
+              <p className="mt-6 text-base sm:text-xl text-gray-300">
 By moving the motor closer to the center of the vehicle, handling and weight distribution are greatly improved              </p>
             </div>
 
@@ -393,20 +393,20 @@ By moving the motor closer to the center of the vehicle, handling and weight dis
             className="relative md:col-start-3 md:col-span-6 bg-[#1C1C1C] rounded-xl shadow-lg p-6 sm:p-8 flex flex-col justify-between"
           >
             <div>
-                    <div className="flex justify-between items-center">
+                    <div className="flex  items-center">
               <AnimatedText
         text={`Tesla Tech`}
-        className="text-lg mt-6 sm:text-3xl uppercase"
+        className="text-lg flex-1 sm:text-4xl uppercase text-center"
       />
 
        <div className="   w-12 h-12 flex items-center justify-center  rounded-full bg-[#A61313]/50 border-2 border-[#A61313] text-white font-bold">
-                   <AnimatedText
+        <AnimatedText
         text={`05`}
         className="text-lg mt-1 sm:text-3xl uppercase"
       />
             </div>
 </div>
-              <p className="text-sm text-gray-300">Built on proven Tesla Model 3/Y and Model 3/Y Performance technology.</p>
+              <p className="mt-6 text-base sm:text-xl text-gray-300 text-center">Built on proven Tesla Model 3/Y and Model 3/Y Performance technology.</p>
             </div>
 
             {/* Number badge */}
