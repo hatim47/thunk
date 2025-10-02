@@ -95,12 +95,12 @@ const texts = 'Lock in your custom EV motor and be one of the first to experienc
 
     </section>
     <footer className="bg-black w-full text-gray-400 py-10 mt-16 flex flex-col justify-center items-center">
-      <div className="w-full max-w-7xl px-6 lg:px-0 flex flex-col sm:flex-row  justify-between ">
+      <div className="w-full max-w-7xl px-6 xl:px-0 flex flex-col sm:flex-row  justify-between ">
         
         {/* Left Section */}
         <div className="">
-          <h2 className="text-3xl sm:text-5xl font-title uppercase font-medium text-white mb-3 tracking-wider">Stay Updated</h2>
-          <p className=" leading-relaxed  text-base sm:text-xl">
+          <h2 className="text-3xl md:text-5xl font-title uppercase text-center font-medium text-white mb-3 tracking-wider">Stay Updated</h2>
+          <p className="text-center leading-relaxed  text-base md:text-xl">
            We promise not to flood your inbox.
           </p>
           <form action="" className="flex flex-col gap-3 py-4">
@@ -130,7 +130,7 @@ const texts = 'Lock in your custom EV motor and be one of the first to experienc
 
           </form>
         </div>
-<div className=" flex gap-8 sm:gap-20">
+<div className="flex gap-8 sm:gap-20">
         {/* Middle Section (Links) */}
         <div className="flex flex-col space-y-2 ">
           <h3 className="text-lg sm:text-2xl font-title uppercase font-medium text-white mb-2 ">Quick Links</h3>

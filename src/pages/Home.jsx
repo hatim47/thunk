@@ -299,9 +299,9 @@ export default function Home() {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, amount: 0.1 }}
         transition={{ duration: 1.5, ease: "easeInOut" }}
-            src="/Group 19.png"   // 👉 replace with your transparent car image
+            src="/Group 19 (1).png"   // 👉 replace with your transparent car image
             alt="Classic Car"
-            className="lg:hidden block  relative w-12/12 -right-12    sm:-right-40    z-1"
+            className="lg:hidden block  relative w-12/12 -right-12    sm:-right-12    z-1"
           />
          
    
@@ -464,7 +464,7 @@ className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/3 h-85 w-[1px
   text={`Space Advantage`}
   className="text-center text-2xl uppercase md:text-4xl leading-tight"
 />
-        <p className="text-sm sm:text-xl mt-6 text-justify sm:text-start">
+        <p className="text-sm md:text-lg  lg:text-xl mt-6 text-justify sm:text-start">
           The biggest challenge of converting a classic car is where to place the batteries.
            Most EV conversion motors sit in the engine bay, taking up valuable space.
             The Thunk3 motor is designed to sit in the transmission tunnel,
@@ -477,41 +477,41 @@ className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/3 h-85 w-[1px
 
     <div className="mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-8 text-center">
 
-        <div className="bg-[linear-gradient(180deg,rgba(56,56,56,0.5)_0%,rgba(28,28,28,0.5)_100%)] p-8 md:p-13 rounded-2xl shadow-2xl transition duration-300 ">
+        <div className="bg-[linear-gradient(180deg,rgba(56,56,56,0.5)_0%,rgba(28,28,28,0.5)_100%)] p-8 xl:p-13 rounded-2xl shadow-2xl transition duration-300 ">
             {/* <h3 className="font-title text-xl font-semibold uppercase mb-3 ">
                 Reliability
             </h3> */}
                   <AnimatedText
   text={`Reliability`}
-  className=" text-center text-xl uppercase md:text-4xl leading-tight"
+  className=" text-center text-xl uppercase   lg:text-3xl  xl:text-4xl leading-tight"
 />
-            <p className="text-sm  sm:text-xl mt-6">
+            <p className="text-sm  md:text-lg  lg:text-xl mt-6">
                 Experience consistent performance with minimal maintenance, engineered for long-term dependability.
             </p>
         </div>
 
-        <div className="bg-[linear-gradient(180deg,rgba(56,56,56,0.5)_0%,rgba(28,28,28,0.5)_100%)] p-8 md:p-13 rounded-2xl shadow-2xl transition duration-300 ">
+        <div className="bg-[linear-gradient(180deg,rgba(56,56,56,0.5)_0%,rgba(28,28,28,0.5)_100%)] p-8 xl:p-13 rounded-2xl shadow-2xl transition duration-300 ">
             {/* <h3 className="font-title text-xl font-semibold uppercase mb-3 tracking-wider">
                 Preservation
             </h3> */}
                               <AnimatedText
   text={`Preservation`}
-  className=" text-center text-xl uppercase md:text-4xl leading-tight"
+  className=" text-center text-xl uppercase lg:text-3xl  xl:text-4xl leading-tight"
 />
-            <p className="text-sm  sm:text-xl  mt-6">
+            <p className="text-sm  md:text-lg  lg:text-xl  mt-6">
                 Extend the life of your classic while keeping its timeless beauty intact with electric EV motors.
             </p>
         </div>
 
-        <div className="bg-[linear-gradient(180deg,rgba(56,56,56,0.5)_0%,rgba(28,28,28,0.5)_100%)] p-8 md:p-13 rounded-2xl shadow-2xl transition duration-300 ">
+        <div className="bg-[linear-gradient(180deg,rgba(56,56,56,0.5)_0%,rgba(28,28,28,0.5)_100%)] p-8 xl:p-13 rounded-2xl shadow-2xl transition duration-300 ">
             {/* <h3 className="font-title text-xl font-semibold uppercase mb-3 tracking-wider">
                 Performance
             </h3> */}
                               <AnimatedText
   text={`Performance`}
-  className=" text-center text-xl uppercase md:text-4xl leading-tight"
+  className=" text-center text-xl uppercase lg:text-3xl  xl:text-4xl leading-tight"
 />
-    <p className="text-sm  sm:text-xl mt-6 leading-relaxed">
+    <p className="text-sm      md:text-lg  lg:text-xl mt-6 leading-relaxed">
         Instant torque and smooth acceleration deliver a driving experience beyond expectation.
     </p>
         </div>
@@ -578,15 +578,24 @@ className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/3 h-85 w-[1px
       </div>
      
      <Slider/>
-     <section className="relative w-full max-w-7xl px-6 pt-10 pb-40 flex flex-col items-center justify-center  text-white ">
+     <section className="relative w-full max-w-7xl px-6 pt-10 pb-20 flex flex-col items-center justify-center  text-white ">
     <div className="w-full flex flex-col sm:grid sm:grid-cols-10 gap-10 ">
-    <div className=" md:col-span-4 text-start">
-      <h3 className="font-title uppercase text-4xl md:text-7xl font-medium">Upgrade <br /> Your Car</h3>
-    </div>
-    <div className="flex flex-col gap-5 md:col-span-6 text-left">
-      <p className="font-bold text-base sm:text-xl">“Instead of replacing the cars we love, we reimagine them for <br className="hidden sm:block" /> the electric future.”</p>
-      <p className="font-light text-base sm:text-xl">With the Thunk3 motor, your classic becomes a future-ready <br className="hidden sm:block" />electric machine. Driving an EV makes your classic perform <br className="hidden sm:block" />like car you’ve always wanted!</p>
-    </div>
+    <motion.div
+     initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.1 }}
+        transition={{ duration: 1.5, ease: "easeInOut" }}
+     className=" md:col-span-4 sm:text-start">
+      <h3 className="font-title uppercase text-4xl md:text-5xl xl:text-6xl font-medium">Upgrade <br /> Your Car</h3>
+    </motion.div>
+    <motion.div  initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.1 }}
+        transition={{ duration: 1.5, ease: "easeInOut" }}
+         className="flex flex-col gap-5 md:col-span-6 sm:text-left">
+      <p className="font-bold text-base md:text-lg xl:text-xl">“Instead of replacing the cars we love, we reimagine them for <br className="hidden xl:block" /> the electric future.”</p>
+      <p className="font-light text-base  xl:text-xl">With the Thunk3 motor, your classic becomes a future-ready <br className="hidden xl:block" />electric machine. Driving an EV makes your classic perform <br className="hidden xl:block" />like car you’ve always wanted!</p>
+    </motion.div>
 
     </div>
 

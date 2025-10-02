@@ -9,22 +9,27 @@ const faqData = [
   {
     id: 1,
     question: "WHAT MAKES THE THUNK 3 MOTOR DIFFERENT FROM OTHER EV CONVERSION MOTORS?",
-    answer: "The Thunk 3 motor is uniquely designed to sit inside the transmission tunnel, which is a major advantage for classic car conversions. This frees up both the engine bay and the rear gas tank area, allowing for battery placement in both the front and rear of the vehicle, resulting in superior weight balance and handling.",
+    answer: "The Thunk3 is the first affordable, high-performance EV conversion motor designed specifically for classic cars. Unlike standard front-mounted motors, it installs in the transmission tunnel, freeing up the engine bay for batteries. No other motor currently offers this benefit. Rear-mounted motors often cut into the gas tank area, reducing space for batteries, but the Thunk3 allows for both front and rear placement. This means more range, better balance, and superior handling",
   },
   {
     id: 2,
     question: "HOW MUCH POWER DOES THE THUNK 3 DELIVER?",
-    answer: "The specific power specifications vary depending on the vintage vehicle configuration and battery system used. However, the Thunk 3 is engineered for instant torque delivery, providing robust, performance-focused acceleration that often exceeds the original vehicle's capabilities.",
+    answer: "The Thunk 3 generates 220+ kW (≈300 HP) with a voltage range of 350 to 400 V. That means instant torque, seamless acceleration, and performance that rivals modern EVs while maintaining the soul of your classic.",
   },
   {
     id: 3,
     question: "WHAT IS THE EV MOTOR PRICE?",
-    answer: "Due to the custom nature of classic car conversions, pricing is quoted based on the specific kit requirements (e.g., cooling, mounting, control units). Please contact our sales team directly for a personalized, accurate quote.",
+    answer: "The Thunk 3 EV motor starts at $18,995. Built on Tesla Model 3/Y and Model 3/Y Performance technology with a Torque Trends gearbox, it offers a cost-effective solution for enthusiasts and shops looking to use EV motors that balance price, performance, and trusted technology.",
   },
   {
     id: 4,
     question: "WHY CONVERT MY CLASSIC CAR WITH AN ELECTRIC CAR CONVERSION MOTOR?",
-    answer: "Converting your classic car to electric power offers the benefits of modern reliability, zero emissions, instant high-torque performance, and significantly reduced maintenance, all while preserving the vehicle's original aesthetics and timeless design.",
+    answer: "Classic cars were built to last, but their engines often limit reliability and usability today. With the Thunk3 you can extend the lifespan of your vehicle, reduce maintenance, and enjoy clean, modern performance without sacrificing style.",
+  },
+    {
+    id: 5,
+    question: "IS THE THUNK3 ELECTRIC MOTOR GOOD FOR CLASSIC CAR CONVERSIONS?",
+    answer: "Yes. The Thunk 3 is designed specifically for seamless integration into classic cars. It delivers excellent weight balance, high performance, and reliability, making it one of the top choices for EV conversions. With its compact size and optimal placement, you gain the freedom to design your project without many of the usual space or installation constraints.",
   },
 ];
 
@@ -77,7 +82,11 @@ const AccordionItem = ({ id, question, answer, activeId, onToggle }) => {
   );
 
   return (
-    <div
+    <motion.div
+     initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.1 }}
+        transition={{ duration: 1.5, ease: "easeInOut" }}
       className="mb-5 rounded-xl shadow-lg shadow-gray-400/10 scale-[0.980] transition-all duration-300 transform hover:scale-[1]"
       style={{
         // Custom gradient/box shadow to achieve the deep, glossy black look from the image
@@ -87,10 +96,10 @@ const AccordionItem = ({ id, question, answer, activeId, onToggle }) => {
     >
       {/* Accordion Header/Button */}
       <button
-        className="w-full flex justify-between items-center p-6 text-left text-sm sm:text-xl uppercase tracking-wide text-[#FAF9F6] font-my "
+        className="w-full flex justify-between items-center p-6 text-left text-sm sm:text-xl uppercase tracking-wide font-title "
         onClick={() => onToggle(id)}
       >
-        <span className=' ms-5 w-6/12'>{question}</span>
+        <span className=' ms-5 lg:w-6/12'>{question}</span>
         {ArrowIcon}
       </button>
 
@@ -102,7 +111,7 @@ const AccordionItem = ({ id, question, answer, activeId, onToggle }) => {
           <p>{answer}</p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

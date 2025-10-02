@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState, useCallback } from 'react';
-
+import { motion } from "framer-motion";
 // Original images array
 const originalImages = [
   '/Group 26.png',
@@ -148,7 +148,13 @@ const goToSlide = useCallback((index, smooth = true) => {
 
 
   return (
-    <div className=" bg-black flex flex-col items-center justify-center pt-20 pb-10 px-4  font-inter">
+    <motion.div
+     initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.1 }}
+        transition={{ duration: 1.5, ease: "easeInOut" }}
+
+    className=" bg-black flex flex-col items-center justify-center pt-20 pb-10 px-4  font-inter">
       <div className="w-full max-w-[1600px] ">
       
         <div 
@@ -199,7 +205,7 @@ const goToSlide = useCallback((index, smooth = true) => {
         
        
       </div>
-    </div>
+    </motion.div>
   );
 };
 
