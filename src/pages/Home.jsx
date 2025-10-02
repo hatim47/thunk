@@ -91,6 +91,7 @@ function AnimatedTextt({ text, className ,lineClasses=[]  }) {
 
 
 export default function Home() {
+  const MotionLink = motion(Link);
  // We use this state to trigger the "lights on" effect after a delay
   const [isCarLitOnLoad, setIsCarLitOnLoad] = useState(false);
 
@@ -330,8 +331,8 @@ export default function Home() {
           {/* Button + Line */}
           <div className="flex items-center max-[431px]:justify-center">
            
-            <motion.a 
-             href="/motor"
+            <MotionLink
+             to="/motor"
              initial={{ opacity: 0, x: -100 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, amount: 0.1 }}
@@ -349,7 +350,7 @@ export default function Home() {
              MORE ABOUT US •
           </span>
         </span>        
-            </motion.a>
+            </MotionLink>
 
             <motion.div
             initial={{ scaleX: 0, opacity: 0 }}
