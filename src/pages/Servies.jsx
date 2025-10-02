@@ -2,6 +2,7 @@ import Footer from "../Footer"
 import Head from "../Head"
 import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import React, { useState, useEffect } from 'react';
 const text = `Partner
 with THUNK`;
@@ -98,18 +99,9 @@ function useMediaQuery(query) {
   return matches;
 }
 export default function Servies() {
- const isMobile = useMediaQuery("(max-width: 640px)");
-      const [isCarLitOnLoad, setIsCarLitOnLoad] = useState(false);
-    
-      useEffect(() => {
-        // Set a 2000ms (2 second) delay before automatically turning the lights on.
-        const timer = setTimeout(() => {
-          setIsCarLitOnLoad(true); 
-        }, 2000); // <-- 2000 milliseconds = 2 seconds
-    
-        // Cleanup function
-        return () => clearTimeout(timer);
-      }, []);
+     const MotionLink = motion(Link);
+
+
       const lines = text.split("\n");
      
 
@@ -135,7 +127,7 @@ export default function Servies() {
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{
                                       duration: 0.5,
-                                       delay: 1.8 + i * 0.05 + lineIndex * 0.3,  // stagger across lines
+                                       delay:  i * 0.05 + lineIndex * 0.3,  // stagger across lines
                                     }}
                                     className="inline-block"
                                   >
@@ -180,7 +172,8 @@ export default function Servies() {
         THUNK partners with car conversion shops, restorers, and EV garages ready to lead in electrification.
          With our custom EV motor solutions, battery boxes, and other EV products, you can grow your business,
          attract new clients, and deliver results that outperform expectations.</motion.p>
-               <motion.button
+               <MotionLink
+             to="/motor"
                                      className="w-fit relative overflow-hidden uppercase px-8 text-xs sm:text-base mt-5  py-2 rounded-full border bg-[#666666]/28 border-gray-400  font-body group"
                                      initial={{ opacity: 0, x: -100 }}
                                      whileInView={{ opacity: 1, x: 0 }}
@@ -190,14 +183,14 @@ export default function Servies() {
                                      <span className="block h-[1.5em] sm:h-[1.2em] overflow-hidden">
                                        {/* First layer */}
                                        <span className="block transition-transform duration-500 ease-in-out group-hover:-translate-y-full">
-                                         Let’s Talk  •
+                                         KNOW MORE ABOUT  •
                                        </span>
                                        {/* Second layer */}
                                        <span className="block transition-transform duration-500 ease-in-out group-hover:-translate-y-full">
-                                        Let’s Talk  •
+                                        KNOW MORE ABOUT  •
                                        </span>
                                      </span>
-                                   </motion.button>
+                                   </MotionLink>
                 </div>  
             <div className="flex-1 relative z-1">
                 <motion.img 
@@ -347,8 +340,9 @@ export default function Servies() {
       />
 
  
-       <motion.button
-        className="relative overflow-hidden  px-4 sm:px-8  pt-2 pb-1 sm:py-3 text-xs sm:text-base rounded-full text-nowrap bg-[#666666]/28 border border-gray-400  font-body group"
+        <MotionLink
+             to="/motor"
+        className="relative overflow-hidden uppercase px-4 sm:px-8  pt-2 pb-1 sm:py-3 text-xs sm:text-base rounded-full text-nowrap bg-[#666666]/28 border border-gray-400  font-body group"
         initial={{ opacity: 0, x: 100 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, amount: 0.1 }}
@@ -357,14 +351,14 @@ export default function Servies() {
         <span className="block h-[1.5em] sm:h-[1em] overflow-hidden">
         
           <span className="block transition-transform duration-500 ease-in-out group-hover:-translate-y-full">
-            VIEW OUR PRODUCT •
+            let’s talk •
           </span>
         
           <span className="block transition-transform duration-500 ease-in-out group-hover:-translate-y-full">
-            VIEW OUR PRODUCT •
+            let’s talk •
           </span>
         </span>
-      </motion.button>
+      </MotionLink>
         </div>
 
         </div>

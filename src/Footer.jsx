@@ -1,21 +1,13 @@
 import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
+import { Link, NavLink } from "react-router-dom";
 import React, { useState, useEffect } from 'react';
 const text = `Taking Pre-
 Orders Now!`;
 
    const lines = text.split("\n");
 const Footer = () => {
-    const [isCarLitOnLoad, setIsCarLitOnLoad] = useState(false);
- useEffect(() => {
-    // Set a 2000ms (2 second) delay before automatically turning the lights on.
-    const timer = setTimeout(() => {
-      setIsCarLitOnLoad(true); 
-    }, 2000); // <-- 2000 milliseconds = 2 seconds
-
-    // Cleanup function
-    return () => clearTimeout(timer);
-  }, []);
+ const MotionLink = motion(Link);
 const texts = 'Lock in your custom EV motor and be one of the first to experience the Thunk3 advantage.';
 
   return (
@@ -71,7 +63,8 @@ const texts = 'Lock in your custom EV motor and be one of the first to experienc
   {texts}
 </h6>
 
-               <motion.button
+              <MotionLink
+             to="/contact"
                     className="w-fit font-my relative overflow-hidden uppercase px-8 text-xs sm:text-base  py-2 rounded-full border bg-[#666666]/28 border-gray-400  font-body group"
                     initial={{ opacity: 0, x: 100 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -88,7 +81,7 @@ const texts = 'Lock in your custom EV motor and be one of the first to experienc
                        BOOK YOURS NOW  •
                       </span>
                     </span>
-                  </motion.button>
+                  </MotionLink>
     </motion.div>
 
     </div>
@@ -134,11 +127,50 @@ const texts = 'Lock in your custom EV motor and be one of the first to experienc
         {/* Middle Section (Links) */}
         <div className="flex flex-col space-y-2 ">
           <h3 className="text-lg sm:text-2xl font-title uppercase font-medium text-white mb-2 ">Quick Links</h3>
-          <a href="#" className="hover:text-white text-base sm:text-lg  text-[#757575]  transition">Home</a>
-          <a href="#" className="hover:text-white text-base sm:text-lg text-[#757575] transition">About US</a>
-          <a href="#" className="hover:text-white text-base sm:text-lg text-[#757575] transition">Services</a>
-            <a href="#" className="hover:text-white text-base sm:text-lg text-[#757575] transition">Products</a>
-          <a href="#" className="hover:text-white text-base sm:text-lg text-[#757575] transition">Contact</a>
+        
+        <NavLink 
+    to="/" 
+    className={({ isActive }) =>
+      `text-base sm:text-lg transition ${
+        isActive ? "text-white " : "text-[#757575] hover:text-white"
+      }`
+    }
+  >
+    Home
+  </NavLink>
+
+  <NavLink 
+    to="/motor"
+    className={({ isActive }) =>
+      `text-base sm:text-lg transition ${
+        isActive ? "text-white " : "text-[#757575] hover:text-white"
+      }`
+    }
+  >
+    Our Product
+  </NavLink>
+
+  <NavLink 
+    to="/service"
+    className={({ isActive }) =>
+      `text-base sm:text-lg transition ${
+        isActive ? "text-white " : "text-[#757575] hover:text-white"
+      }`
+    }
+  >
+    Partner with us
+  </NavLink>
+
+  <NavLink 
+    to="/contact"
+    className={({ isActive }) =>
+      `text-base sm:text-lg transition ${
+        isActive ? "text-white " : "text-[#757575] hover:text-white"
+      }`
+    }
+  >
+    Contact
+  </NavLink>
         </div>
 
         {/* Right Section (Socials) */}
@@ -146,10 +178,38 @@ const texts = 'Lock in your custom EV motor and be one of the first to experienc
               <div className="flex   gap-10 sm:gap-20">
                  <div className="flex flex-col space-y-2">
           <h3 className="text-lg sm:text-2xl font-title uppercase font-medium text-white mb-2">Media</h3>
-          <a href="#" className="hover:text-white text-base sm:text-lg  text-[#757575] transition">News</a>
-          <a href="#" className="hover:text-white text-base sm:text-lg  text-[#757575] transition">Gallery</a>
-          <a href="#" className="hover:text-white text-base sm:text-lg text-[#757575] transition">Videos</a>
-        
+           <NavLink
+    to="/new"
+    className={({ isActive }) =>
+      `text-base sm:text-lg transition ${
+        isActive ? "text-white font-semibold" : "text-[#757575] hover:text-white"
+      }`
+    }
+  >
+    News
+  </NavLink>
+
+  <NavLink
+    to="/gallery"
+    className={({ isActive }) =>
+      `text-base sm:text-lg transition ${
+        isActive ? "text-white font-semibold" : "text-[#757575] hover:text-white"
+      }`
+    }
+  >
+    Gallery
+  </NavLink>
+
+  <NavLink
+    to="/video"
+    className={({ isActive }) =>
+      `text-base sm:text-lg transition ${
+        isActive ? "text-white font-semibold" : "text-[#757575] hover:text-white"
+      }`
+    }
+  >
+    Videos
+  </NavLink>
         </div>
             
             

@@ -68,7 +68,7 @@ const [open, setOpen] = useState(false);
                                       animate={{ opacity: 1, y: 0 }}
                                       transition={{
                                         duration: 0.5,
-                                         delay: 1.8 + i * 0.05 + lineIndex * 0.3,  // stagger across lines
+                                         delay:  i * 0.05 + lineIndex * 0.3,  // stagger across lines
                                       }}
                                       className="inline-block"
                                     >

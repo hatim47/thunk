@@ -3,6 +3,7 @@ import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 export default function Head() {
+     const MotionLink = motion(Link);
   const [isOpen, setIsOpen] = useState(false);
  const [show, setShow] = useState(false);
 
@@ -12,30 +13,19 @@ export default function Head() {
   }, []);
   return (
     <>
-      {/* Header */}
+     
       <header className="relative  w-full max-w-7xl flex items-center justify-between mx-auto px-6 py-4 top-0 left-0   z-50">
         <div
       className={`absolute -top-10 left-[20%] w-[200px] h-[90px] sm:left-[35%]  xl:left-[15%]  xl:w-[900px] xl:h-[190px] sm:w-[300px] sm:h-[120px]  bg-white blur-[180px]  rounded-full z-0 transition-opacity duration-2000 ${
         show ? "opacity-70" : "opacity-0"
       }`}
     ></div>
-
-
-        {/* Logo */}
         <Link to="/" className="text-xl font-bold text-gray-800">
           <img src="/Layer_1.png" className="w-5/12  sm:w-9/12" alt="Logo" />
-        </Link>
-
-        {/* Menu Button */}
-        {/* <button
-          onClick={() => setIsOpen(true)}
-          className="p-2 rounded-xl  transition"
-        >
-            MENU
-        </button> */}
+        </Link>       
         <div className="flex gap-3">
-      <motion.button
-              
+        <MotionLink
+             to="/contact"
                     className="hidden font-my sm:block w-fit relative overflow-hidden shadow-xl shadow-black/30 px-8 text-white uppercase py-2 rounded-full border bg-[#666666]/28 border-gray-400 text-nowrap text-xs/10  sm:text-lg font-body group"
                     initial={{ opacity: 0, x: 100 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -43,16 +33,16 @@ export default function Head() {
                     transition={{ duration: 1.5, ease: "easeInOut" }}
                   >
                     <span className="block h-[1.5em] sm:h-[1.2em] overflow-hidden">
-                      {/* First layer */}
+                   
                       <span className="block transition-transform duration-500 ease-in-out group-hover:-translate-y-full">
                        let’s talk  •
                       </span>
-                      {/* Second layer */}
+                      
                       <span className="block transition-transform duration-500 ease-in-out group-hover:-translate-y-full">
                        let’s talk  •
                       </span>
                     </span>
-                  </motion.button>
+                  </MotionLink>
                <motion.button
                onClick={() => setIsOpen(true)}
                     className="w-fit font-my relative overflow-hidden px-8 text-white shadow-xl shadow-black/30 py-2 rounded-full border bg-[#666666]/28 border-gray-400 text-sm  sm:text-lg font-body group"
@@ -62,11 +52,11 @@ export default function Head() {
                     transition={{ duration: 1.5, ease: "easeInOut" }}
                   >
                     <span className="block h-[1.2em] overflow-hidden">
-                      {/* First layer */}
+                  
                       <span className="block transition-transform duration-500 ease-in-out group-hover:-translate-y-full">
                        MENU  •
                       </span>
-                      {/* Second layer */}
+                   
                       <span className="block transition-transform duration-500 ease-in-out group-hover:-translate-y-full">
                        MENU  •
                       </span>
@@ -76,13 +66,11 @@ export default function Head() {
 
       </header>
 
-      {/* Fullscreen Menu Overlay */}
       <div
         className={`fixed w-8/12 lg:w-4/12 xl:w-3/12   sm:h-[98vh] right-0 bg-[#1C1C1C] rounded-l-3xl mt-2  z-50 flex flex-col justify-between transform transition-opacity duration-300 ${
           isOpen ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
       >
-        {/* Top row: Logo + Close */}
         <div className="flex items-center justify-between py-6  px-15">
           <img src="/Layer_1.png" className="w-24 sm:w-5/12 pe-7" alt="Logo" />
           <button
@@ -93,7 +81,6 @@ export default function Head() {
           </button>
         </div>
 
-        {/* Center Menu Items */}
         <nav className="flex flex-col items-start uppercase px-15 justify-center flex-1 space-y-6 text-lg   md:text-3xl font-medium ">
         <Link to="/" className="font-title">Home</Link>
   <Link to="/motor" className="font-title">Product</Link>

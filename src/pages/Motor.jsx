@@ -2,6 +2,7 @@ import Footer from "../Footer"
 import Head from "../Head"
 import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import React, { useState, useEffect } from 'react';
 const text = `The THUNK 3
 At a Glance`;
@@ -32,20 +33,20 @@ const letterVariantt = {
 };
 
 function AnimatedText({ text, className ,lineClasses=[]  }) {
-  const lines = text.split("\n"); // 👈 handle line breaks
+  const lines = text.split("\n"); 
   return (
     <span className={`inline-block font-title ${className}`}>
       {lines.map((line, lineIndex) => (
         <span key={lineIndex} className={`block ${
-            lineClasses[lineIndex] || "" // 👈 apply custom class if provided
+            lineClasses[lineIndex] || "" 
           }`}>
           {Array.from(line).map((char, i) => (
             <motion.span
               key={i}
-              custom={i + lineIndex * 20} // 👈 offset delay for each line
+              custom={i + lineIndex * 20} 
               variants={letterVariantt}
               initial="hidden"
-                whileInView="show"     // 👈 animate when in viewport
+                whileInView="show"    
   viewport={{ once: true, amount: 0.1 }} 
               className="inline-block"
             >
@@ -58,21 +59,21 @@ function AnimatedText({ text, className ,lineClasses=[]  }) {
   );
 }
 function AnimatedTextt({ text, className ,lineClasses=[]  }) {
-  const lines = text.split("\n"); // 👈 handle line breaks
+  const lines = text.split("\n"); 
 
   return (
     <span className={`inline-block ${className}`}>
       {lines.map((line, lineIndex) => (
         <span key={lineIndex} className={`block ${
-            lineClasses[lineIndex] || "" // 👈 apply custom class if provided
+            lineClasses[lineIndex] || "" 
           }`}>
           {Array.from(line).map((char, i) => (
             <motion.span
               key={i}
-              custom={i + lineIndex * 20} // 👈 offset delay for each line
+              custom={i + lineIndex * 20} 
               variants={letterVariant}
               initial="hidden"
-              whileInView="show"     // 👈 animate when in viewport
+              whileInView="show"    
   viewport={{ once: true, amount: 0.1 }} 
               className="inline-block"
             >
@@ -126,23 +127,20 @@ function useMediaQuery(query) {
   return matches;
 }
 export default function Motor() {
+   const MotionLink = motion(Link);
   const isMobile = useMediaQuery("(max-width: 640px)");
       const [isCarLitOnLoad, setIsCarLitOnLoad] = useState(false);
     
       useEffect(() => {
-        // Set a 2000ms (2 second) delay before automatically turning the lights on.
         const timer = setTimeout(() => {
           setIsCarLitOnLoad(true); 
-        }, 2000); // <-- 2000 milliseconds = 2 seconds
+        }, 2000); 
     
-        // Cleanup function
+      
         return () => clearTimeout(timer);
       }, []);
-      const lines = text.split("\n");
-     
-    // Variants for parent (controls timing of children)
-    
-    
+      const lines = text.split("\n");   
+   
   return (
     <>
   <Head></Head>
@@ -155,18 +153,18 @@ export default function Motor() {
     
         <div className="flex justify-center sm:mb-12">
             <motion.img
-              initial={{ opacity: 0, y: 10 }}          // hidden + pushed down
-      whileInView={{ opacity: 1, y: 0 }}       // visible + natural place
-      viewport={{ once: true, amount: 0.1 }}   // trigger on scroll, only once
+              initial={{ opacity: 0, y: 10 }}         
+      whileInView={{ opacity: 1, y: 0 }}       
+      viewport={{ once: true, amount: 0.1 }}   
       transition={{
         duration: 1.5,
         ease: "easeInOut",
       }}
             src="/Group 15.png" alt="Thunk3 EV Motor" className=" w-9/12 h-auto z-12"/>
              <motion.div 
-                   initial={{ opacity: 0, y: 40 }}          // hidden + pushed down
-       whileInView={isMobile ? { opacity: 1, y: 0 } : { opacity: 0.5, y: 0 }}      // visible + natural place
-      viewport={{ once: true, amount: 0.1 }}   // trigger on scroll, only once
+                   initial={{ opacity: 0, y: 40 }}          
+       whileInView={isMobile ? { opacity: 1, y: 0 } : { opacity: 0.5, y: 0 }}     
+      viewport={{ once: true, amount: 0.1 }}   
       transition={{
         duration: 1.5,
         ease: "easeInOut",
@@ -192,7 +190,7 @@ export default function Motor() {
                               animate={{ opacity: 1, y: 0 }}
                               transition={{
                                 duration: 0.5,
-                                 delay: 1.8 + i * 0.05 + lineIndex * 0.3,  // stagger across lines
+                                 delay:  i * 0.05 + lineIndex * 0.3,  // stagger across lines
                               }}
                               className="inline-block"
                             >
@@ -204,12 +202,20 @@ export default function Motor() {
                     })}      
                   </h1>
             
-                <p className="text-base sm:text-xl mt-6 ">
+                <motion.p 
+                initial={{ opacity: 0, y: 40 }}         
+      whileInView={{ opacity: 1, y: 0 }}      
+      viewport={{ once: true, amount: 0.1 }}   
+      transition={{
+        duration: 1.5,
+        ease: "easeInOut",
+      }}
+                className="text-base sm:text-xl mt-6 ">
                     Every classic car has a story worth continuing, and the Thunk3 makes that possible. Built as an EV conversion motor, it slips neatly into the transmission tunnel while unlocking the power and efficiency of Tesla technology.
-                    </p>
+                    </motion.p>
                 </div>
             
-                    {/* Curved line at bottom */}
+                  
                     <div className="absolute top-20 sm:top-25 w-full">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1728 278" fill="none">
                         <path d="M-124 278C-124 278 -124 278 -124 278C-95.4732 259.861 -64.4335 242.275 -34.3267 226.648C242.937 85.7131 553.895 16.981 863.659 15.5043C1173.58 14.1887 1483.2 88.6473 1760.46 229.077C1791.45 244.691 1821.44 260.705 1852 278C1852 278 1852 278 1852 278C1821.94 259.841 1792.4 242.983 1761.77 226.548C1487.95 78.6655 1175.97 -0.909466 863.628 0.504292C551.463 1.91802 238.415 75.6354 -35.6738 224.137C-65.4166 240.589 -96.0216 259.025 -124 278Z" fill="url(#paint0_linear_60_194)"/>
@@ -238,12 +244,12 @@ export default function Motor() {
 
 
                    <section className="relative w-full py-10 pb-30 sm:py-16 px-6 text-white z-1">
-      {/* Title */}
+     
     
     <motion.div 
-                   initial={{ opacity: 0, y: 40 }}          // hidden + pushed down
-      whileInView={{ opacity: 1, y: 0 }}       // visible + natural place
-      viewport={{ once: true, amount: 0.1 }}   // trigger on scroll, only once
+                   initial={{ opacity: 0, y: 40 }}         
+      whileInView={{ opacity: 1, y: 0 }}      
+      viewport={{ once: true, amount: 0.1 }}   
       transition={{
         duration: 1.5,
         ease: "easeInOut",
@@ -420,7 +426,8 @@ By moving the motor closer to the center of the vehicle, handling and weight dis
 
       {/* Button */}
       <div className="flex justify-center mt-12">
-            <motion.button
+            <MotionLink
+             to="/contact"
                             className="w-fit relative overflow-hidden uppercase px-8 text-xs sm:text-base  py-2 rounded-full border bg-[#666666]/28 border-gray-400  font-body group"
                             initial={{ opacity: 0, x: 100 }}
                             whileInView={{ opacity: 1, x: 0 }}
@@ -437,7 +444,7 @@ By moving the motor closer to the center of the vehicle, handling and weight dis
                                Let’s Talk  •
                               </span>
                             </span>
-                          </motion.button>
+                          </MotionLink>
       </div>
  
     </section>

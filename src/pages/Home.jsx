@@ -247,25 +247,26 @@ export default function Home() {
         }}
       />
 
- 
-       <motion.button
-        className="font-my relative overflow-hidden  px-4 sm:px-8  pt-2 pb-1 sm:py-3 text-xs sm:text-base rounded-full text-nowrap bg-[#666666]/28 border border-gray-400  font-body group"
-        initial={{ opacity: 0, x: 100 }}
+       <MotionLink
+             to="/motor"
+             initial={{ opacity: 0, x: -100 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, amount: 0.1 }}
         transition={{ duration: 1.5, ease: "easeInOut" }}
-      >
-        <span className="block h-[1.5em] sm:h-[1em] overflow-hidden">
-        
+
+            className="font-my group px-6 py-2 rounded-full bg-[#666666]/28 border border-gray-400  font-body transition">
+             
+             <span className="block h-[1.2em] overflow-hidden">
+          {/* First layer */}
           <span className="block transition-transform duration-500 ease-in-out group-hover:-translate-y-full">
-            VIEW OUR PRODUCT •
+            MORE ABOUT US •
           </span>
-        
+          {/* Second layer */}
           <span className="block transition-transform duration-500 ease-in-out group-hover:-translate-y-full">
-            VIEW OUR PRODUCT •
+             MORE ABOUT US •
           </span>
-        </span>
-      </motion.button>
+        </span>        
+            </MotionLink>
         </div>
         </div>
      
@@ -328,11 +329,11 @@ export default function Home() {
            with future plans to add complementary products such as battery boxes.
           </motion.p>
 
-          {/* Button + Line */}
+        
           <div className="flex items-center max-[431px]:justify-center">
            
             <MotionLink
-             to="motor"
+             to="/service"
              initial={{ opacity: 0, x: -100 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, amount: 0.1 }}
@@ -343,11 +344,11 @@ export default function Home() {
              <span className="block h-[1.2em] overflow-hidden">
           {/* First layer */}
           <span className="block transition-transform duration-500 ease-in-out group-hover:-translate-y-full">
-            MORE ABOUT US •
+            PARTNER WITH US  •
           </span>
           {/* Second layer */}
           <span className="block transition-transform duration-500 ease-in-out group-hover:-translate-y-full">
-             MORE ABOUT US •
+            PARTNER WITH US  •
           </span>
         </span>        
             </MotionLink>
@@ -523,7 +524,8 @@ className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/3 h-85 w-[1px
 
     </div>
      <div className="w-full flex justify-center py-10">
-   <motion.button
+   <MotionLink
+             to="/motor"
         className="font-my relative overflow-hidden uppercase px-8 text-xs sm:text-base  py-2 rounded-full border bg-[#666666]/28 border-gray-400  font-body group"
         initial={{ opacity: 0, x: 100 }}
         whileInView={{ opacity: 1, x: 0 }}
@@ -540,7 +542,7 @@ className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/3 h-85 w-[1px
             View our EV conversion motor •
           </span>
         </span>
-      </motion.button>
+      </MotionLink>
 </div>
 
 </div>
@@ -584,13 +586,13 @@ className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/3 h-85 w-[1px
      
      <Slider/>
      <section className="relative w-full max-w-7xl px-6 pt-10 pb-20 flex flex-col items-center justify-center  text-white ">
-    <div className="w-full flex flex-col sm:grid sm:grid-cols-10 gap-10 ">
+    <div className="w-full flex self-center flex-col sm:grid sm:grid-cols-10 gap-10 ">
     <motion.div
      initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.1 }}
         transition={{ duration: 1.5, ease: "easeInOut" }}
-     className=" md:col-span-4 sm:text-start">
+     className=" md:col-span-3 flex self-center sm:text-start">
       <h3 className="font-title uppercase text-4xl md:text-5xl xl:text-6xl font-medium">Upgrade <br /> Your Car</h3>
     </motion.div>
     <motion.div  initial={{ opacity: 0, y: 100 }}
@@ -598,7 +600,7 @@ className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/3 h-85 w-[1px
         viewport={{ once: true, amount: 0.1 }}
         transition={{ duration: 1.5, ease: "easeInOut" }}
          className="flex flex-col gap-5 md:col-span-6 sm:text-left">
-      <p className="font-bold text-base md:text-lg xl:text-xl">“Instead of replacing the cars we love, we reimagine them for <br className="hidden xl:block" /> the electric future.”</p>
+      <span className="font-bold text-base md:text-lg xl:text-xl text-white">“Instead of replacing the cars we love, we reimagine them for  the electric future.”</span>
       <p className="font-light text-base  xl:text-xl">With the Thunk3 motor, your classic becomes a future-ready <br className="hidden xl:block" />electric machine. Driving an EV makes your classic perform <br className="hidden xl:block" />like car you’ve always wanted!</p>
     </motion.div>
 
