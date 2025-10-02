@@ -332,7 +332,7 @@ export default function Home() {
           <div className="flex items-center max-[431px]:justify-center">
            
             <MotionLink
-             to="/motor"
+             to="motor"
              initial={{ opacity: 0, x: -100 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, amount: 0.1 }}
