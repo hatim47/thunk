@@ -50,25 +50,50 @@ function AnimatedText({ text, className ,lineClasses=[]  }) {
   );
 }
 
+
+
+
 export default function Contact() {
-   
+     const [formData, setFormData] = useState({
+    name: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
 
-const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission logic here
-    console.log('Form Submitted!');
-  };
+  const [status, setStatus] = useState({ loading: false, success: "", error: "" });
+ // ✅ Submit to backend (Express + MySQL)
+ const handleSubmit = async (e) => {
+  e.preventDefault();
+  setStatus({ loading: true, success: "", error: "" });
 
+  try {
+    const res = await fetch("http://localhost:5000/api/contacts", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
 
-      useEffect(() => {
-        // Set a 2000ms (2 second) delay before automatically turning the lights on.
-        const timer = setTimeout(() => {
-          setIsCarLitOnLoad(true); 
-        }, 2000); // <-- 2000 milliseconds = 2 seconds
+    if (!res.ok) throw new Error("Failed to submit form");
+
+    const newContact = await res.json();
+    setStatus({ loading: false, success: "✅ Your message has been sent!", error: "" });
+    setFormData({ firstName: "", lastName: "", email: "", phone: "", message: "" });
+  } catch (err) {
+    console.error(err);
+    setStatus({ loading: false, success: "", error: "❌ Something went wrong. Please try again." });
+  }
+};
+
+  // Optional: load contacts from DB when page loads
+  useEffect(() => {
+    fetch("http://localhost:5000/api/contacts")
+      .then((res) => res.json())
+      .then((data) => setContacts(data));
+  }, []);
     
-        // Cleanup function
-        return () => clearTimeout(timer);
-      }, []);
+     
       const lines = text.split("\n");
      
     // Variants for parent (controls timing of children)
@@ -145,6 +170,8 @@ Whether you are examining your first EV conversion motor, searching for a suitab
             <input
               type="text"
               id="firstName"
+               value={formData.name}
+                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
               className="w-full bg-[#333333] border border-[#555555] rounded-lg py-3 px-4 text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-gray-600"
             />
           </div>
@@ -155,6 +182,8 @@ Whether you are examining your first EV conversion motor, searching for a suitab
             <input
               type="text"
               id="lastName"
+               value={formData.lastName}
+                onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
               className="w-full bg-[#333333] border border-[#555555] rounded-lg py-3 px-4 text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-gray-600"
             />
           </div>
@@ -169,6 +198,8 @@ Whether you are examining your first EV conversion motor, searching for a suitab
             <input
               type="email"
               id="email"
+               value={formData.email}
+                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
               className="w-full bg-[#333333] border border-[#555555] rounded-lg py-3 px-4 text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-gray-600"
             />
           </div>
@@ -179,6 +210,8 @@ Whether you are examining your first EV conversion motor, searching for a suitab
             <input
               type="tel"
               id="phone"
+                value={formData.phone}
+                onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
               className="w-full bg-[#333333] border border-[#555555] rounded-lg py-3 px-4 text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-gray-600"
             />
           </div>
@@ -192,31 +225,39 @@ Whether you are examining your first EV conversion motor, searching for a suitab
           <textarea
             id="message"
             rows="6"
+            value={formData.message}
+              onChange={(e) => setFormData({ ...formData, message: e.target.value })}
             className="w-full bg-[#333333] border border-[#555555] rounded-lg py-3 px-4 text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-gray-600 resize-none"
           ></textarea>
         </div>
 
         {/* Submit Button */}
         <motion.button
-                                 className="w-fit relative text-white overflow-hidden uppercase px-8 text-xs sm:text-base  py-2 rounded-full border bg-[#666666]/28 border-gray-400  font-body group"
+                               type="submit"    className="w-fit relative text-white overflow-hidden uppercase px-8 text-xs sm:text-base  py-2 rounded-full border bg-[#666666]/28 border-gray-400  font-body group"
                                  initial={{ opacity: 0, x: 100 }}
                                  whileInView={{ opacity: 1, x: 0 }}
                                  viewport={{ once: true, amount: 0.1 }}
                                  transition={{ duration: 1.5, ease: "easeInOut" }}
+                                 disabled={status.loading}
                                >
                                  <span className="block h-[1.5em] sm:h-[1.2em] overflow-hidden">
                                    {/* First layer */}
                                    <span className=" block transition-transform duration-500 ease-in-out group-hover:-translate-y-full">
-                                     Send Message  •
+                                    {status.loading ? "Sending..." : "Send Message"}  • 
                                    </span>
                                    {/* Second layer */}
                                    <span className="block transition-transform duration-500 ease-in-out group-hover:-translate-y-full">
-                                    Send Message  •
+                                    {status.loading ? "Sending..." : "Send Message"} • 
                                    </span>
                                  </span>
                                </motion.button>
       </form>
-
+{status.success && (
+  <p className="text-green-400 text-center mt-4">{status.success}</p>
+)}
+{status.error && (
+  <p className="text-red-500 text-center mt-4">{status.error}</p>
+)}
       {/* Footer Text */}
       <span className="text-[#A61313]  text-center text-sm sm:text-xl font-semibold tracking-wider mt-12 mb-4">
         LET'S BUILD THE FUTURE OF DRIVING TOGETHER.
