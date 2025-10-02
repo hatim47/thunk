@@ -329,7 +329,7 @@ export default function Home() {
 
           {/* Button + Line */}
           <div className="flex items-center max-[431px]:justify-center">
-           <Link to="/motor">
+           
             <motion.a 
              href="/motor"
              initial={{ opacity: 0, x: -100 }}
@@ -350,7 +350,7 @@ export default function Home() {
           </span>
         </span>        
             </motion.a>
-</Link>
+
             <motion.div
             initial={{ scaleX: 0, opacity: 0 }}
         whileInView={{ scaleX: 1, opacity: 1 }}
