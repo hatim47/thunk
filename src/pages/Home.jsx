@@ -329,11 +329,13 @@ export default function Home() {
 
           {/* Button + Line */}
           <div className="flex items-center max-[431px]:justify-center">
-            <motion.button 
+            <motion.a 
+             href="/motor"
              initial={{ opacity: 0, x: -100 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, amount: 0.1 }}
         transition={{ duration: 1.5, ease: "easeInOut" }}
+
             className="font-my group px-6 py-2 rounded-full bg-[#666666]/28 border border-gray-400  font-body transition">
              
              <span className="block h-[1.2em] overflow-hidden">
@@ -346,7 +348,7 @@ export default function Home() {
              MORE ABOUT US •
           </span>
         </span>        
-            </motion.button>
+            </motion.a>
             <motion.div
             initial={{ scaleX: 0, opacity: 0 }}
         whileInView={{ scaleX: 1, opacity: 1 }}
