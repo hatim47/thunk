@@ -117,22 +117,35 @@ export default function Home() {
   <section className="w-max-7xl px-4 flex justify-center mb-2">
         
         {/* Container for the Hover (Light Up) effect. Use 'group' and 'relative' */}
-        <div className="group relative w-10/12">
+        <div className="group relative pt-15 sm:pt-0 w-[100%]  sm:w-10/12">
           
           {/* Default Dark Image: Loads normally (immediately visible) */}
           <img 
+            src="/Car.png" 
+            className=" max-[431px]:block  hidden  w-full " // No opacity/transition classes here
+            alt="Classic car, lights off" 
+          />
+         
+          <img 
             src="/318 2.png" 
-            className="w-full" // No opacity/transition classes here
+            className=" max-[431px]:hidden w-full " // No opacity/transition classes here
             alt="Classic car, lights off" 
           />
           
           {/* Light Up Image (The one that appears after 2s AND on hover) */}
           <img 
+            src="/Group 26768 (2) (1).png" 
+            alt="Classic car, lights on" 
+            // The opacity is controlled by a combination of the 'onload' state and the 'hover' state.
+            // Using 'group-hover:opacity-100' and a dynamic class for the onload state.
+            className={` max-[431px]:block  hidden  w-[120%] top-15 sm:top-0 sm:w-full absolute inset-0 transition-opacity duration-500 group-hover:opacity-100 ${isCarLitOnLoad ? 'opacity-100' : 'opacity-0'}`} 
+          />
+          <img 
             src="/Group 26768.png" 
             alt="Classic car, lights on" 
             // The opacity is controlled by a combination of the 'onload' state and the 'hover' state.
             // Using 'group-hover:opacity-100' and a dynamic class for the onload state.
-            className={`w-full absolute inset-0 transition-opacity duration-500 group-hover:opacity-100 ${isCarLitOnLoad ? 'opacity-100' : 'opacity-0'}`} 
+            className={` max-[431px]:hidden  w-[120%] sm:w-full absolute inset-0 transition-opacity duration-500 group-hover:opacity-100 ${isCarLitOnLoad ? 'opacity-100' : 'opacity-0'}`} 
           />
         </div>
       </section>
@@ -174,7 +187,7 @@ export default function Home() {
     </div>
 
         {/* Curved line at bottom */}
-        <div className="absolute top-25 w-full">
+        <div className="absolute top-30 sm:top-25 w-full">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1728 278" fill="none">
             <path d="M-124 278C-124 278 -124 278 -124 278C-95.4732 259.861 -64.4335 242.275 -34.3267 226.648C242.937 85.7131 553.895 16.981 863.659 15.5043C1173.58 14.1887 1483.2 88.6473 1760.46 229.077C1791.45 244.691 1821.44 260.705 1852 278C1852 278 1852 278 1852 278C1821.94 259.841 1792.4 242.983 1761.77 226.548C1487.95 78.6655 1175.97 -0.909466 863.628 0.504292C551.463 1.91802 238.415 75.6354 -35.6738 224.137C-65.4166 240.589 -96.0216 259.025 -124 278Z" fill="url(#paint0_linear_60_194)"/>
             <defs>
@@ -402,17 +415,14 @@ className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/3 h-85 w-[1px
   text={`WHY CHOOSE\nTHUNK 3`}
   className=" text-center text-3xl md:text-6xl leading-tight"
 />
-
         {/* <p className="mt-6 text-center text-lg md:text-xl text-[#A61313]">As Your New EV Conversion Motor?</p> */}
-
         <AnimatedTextt
   text={`As Your New EV Conversion Motor?`}
   className="text-center text-4xl md:text-6xl leading-tigh  text-lg md:text-xl text-[#A61313]"
 />
       </div>
       <div>
-
-
+  
         <div className="relative min-h-screen bg-black text-white font-sans ">
 
     <div className="flex justify-center mb-12">
