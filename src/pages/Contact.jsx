@@ -69,7 +69,7 @@ export default function Contact() {
   setStatus({ loading: true, success: "", error: "" });
 
   try {
-    const res = await fetch("http://localhost:5000/api/contacts", {
+    const res = await fetch("/api/contacts", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
@@ -88,7 +88,7 @@ export default function Contact() {
 
   // Optional: load contacts from DB when page loads
   useEffect(() => {
-    fetch("http://localhost:5000/api/contacts")
+    fetch("/api/contacts")
       .then((res) => res.json())
       .then((data) => setContacts(data));
   }, []);
@@ -122,7 +122,7 @@ export default function Contact() {
                                       animate={{ opacity: 1, y: 0 }}
                                       transition={{
                                         duration: 0.5,
-                                         delay:  i * 0.05 + lineIndex * 0.3,  // stagger across lines
+                                         delay: i * 0.05 + lineIndex * 0.3,  
                                       }}
                                       className="inline-block"
                                     >

@@ -10,7 +10,7 @@ export default function AdminContacts() {
   useEffect(() => {
     const fetchContacts = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/contacts");
+        const res = await fetch("/api/contacts");
         const data = await res.json();
         setContacts(data);
       } catch (error) {
@@ -65,8 +65,10 @@ export default function AdminContacts() {
             <thead className="bg-gray-800">
               <tr>
                 <th className="p-3 border border-gray-700">ID</th>
-                <th className="p-3 border border-gray-700">Name</th>
+                <th className="p-3 border border-gray-700">First Name</th>
+                <th className="p-3 border border-gray-700">Last Name</th>
                 <th className="p-3 border border-gray-700">Email</th>
+                <th className="p-3 border border-gray-700">Phone #</th>
                 <th className="p-3 border border-gray-700">Message</th>
               </tr>
             </thead>
@@ -78,7 +80,9 @@ export default function AdminContacts() {
                 >
                   <td className="p-3 border border-gray-700">{contact.id}</td>
                   <td className="p-3 border border-gray-700">{contact.name}</td>
+                  <td className="p-3 border border-gray-700">{contact.lastname}</td>
                   <td className="p-3 border border-gray-700">{contact.email}</td>
+                  <td className="p-3 border border-gray-700">{contact.phone}</td>
                   <td className="p-3 border border-gray-700">{contact.message}</td>
                 </tr>
               ))}
