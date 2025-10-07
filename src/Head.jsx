@@ -63,12 +63,8 @@ export default function Head() {
                        MENU  •
                       </span>
                     </span>
-                  </motion.button>
-              
-              =
-
-
-
+                  </motion.button>         
+            
 
 </div>
 
