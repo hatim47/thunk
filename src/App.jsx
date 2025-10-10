@@ -7,7 +7,8 @@ import News from "./pages/News";
 import Gallery from "./pages/Gallery";
 import Video from "./pages/Video";
 import Login from "./pages/Login";
-
+import TC from "./pages/Terms & Condition";
+import PP from "./pages/Privacy Policy";
 import AdminContacts from "./pages/AdminContacts";
 export default function App() {
   return (
@@ -29,6 +30,8 @@ export default function App() {
  <Route path="/video" element={<Video />} />
   <Route path="/login" element={<Login />} />
   <Route path="/contactadmin" element={<AdminContacts />} />
+  <Route path="/terms&condition" element={<TC/>} />
+   <Route path="/privacypolicy" element={<PP/>} />
       </Routes>
     </div>
   );

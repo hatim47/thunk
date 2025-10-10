@@ -12,7 +12,7 @@ const texts = 'Lock in your custom EV motor and be one of the first to experienc
 
   return (
     <> 
-  <section className="relativew w-full bg-[#A61313] px-6 flex flex-col items-center justify-center text-white ">
+  <section className="relativew  w-full bg-[#A61313] px-6 flex flex-col items-center justify-center text-white ">
  <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center py-5  sm:py-0 gap-2 sm:gap-0 ">
     <div className="text-center sm:text-left w-full sm:w-4/12 ">
        <h3 className="font-my uppercase text-center sm:text-start text-lg md:text-4xl font-medium  flex justify-center sm:block">
@@ -215,8 +215,29 @@ const texts = 'Lock in your custom EV motor and be one of the first to experienc
             
               <div className="flex flex-col space-y-2">
           <h3 className="text-lg sm:text-2xl font-title uppercase font-medium text-white mb-2">Legal</h3>
-          <a href="#" className="hover:text-white text-base sm:text-lg text-[#757575] transition">Terms & Condition</a>
-          <a href="#" className="hover:text-white text-base sm:text-lg text-[#757575] transition">Privacy Policy</a>
+          <NavLink
+    to="/terms&condition"
+    className={({ isActive }) =>
+      `text-base sm:text-lg transition ${
+        isActive ? "text-white font-semibold" : "text-[#757575] hover:text-white"
+      }`
+    }
+  >
+    Terms & Condition
+  </NavLink>
+
+      <NavLink
+    to="/privacypolicy"
+    className={({ isActive }) =>
+      `text-base sm:text-lg transition ${
+        isActive ? "text-white font-semibold" : "text-[#757575] hover:text-white"
+      }`
+    }
+  >
+    Privacy Policy
+  </NavLink>
+          {/* <a href="#" className="hover:text-white text-base sm:text-lg text-[#757575] transition">Terms & Condition</a> */}
+          {/* <a href="#" className="hover:text-white text-base sm:text-lg text-[#757575] transition">Privacy Policy</a> */}
        
         </div>
 </div>
