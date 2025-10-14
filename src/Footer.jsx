@@ -263,7 +263,7 @@ const texts = 'Lock in your custom EV motor and be one of the first to experienc
       </div>
  </div>
       <p className="mt-10 text-center text-baes text-gray-500">
-        © {new Date().getFullYear()} CarShowcase. All rights reserved.
+        © {new Date().getFullYear()} THUNK. All rights reserved.
       </p>
     </footer>
     </>

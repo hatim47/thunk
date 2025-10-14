@@ -341,7 +341,7 @@ export default function Servies() {
 
  
         <MotionLink
-             to="/motor"
+             to="/contact"
         className="relative overflow-hidden uppercase px-4 sm:px-8  pt-2 pb-1 sm:py-3 text-xs sm:text-base rounded-full text-nowrap bg-[#666666]/28 border border-gray-400  font-body group"
         initial={{ opacity: 0, x: 100 }}
         whileInView={{ opacity: 1, x: 0 }}

@@ -407,7 +407,7 @@ className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/3 h-85 w-[1px
     </section>
 
     <section className="relative max-w-7xl px-6">
-      <div className="flex flex-col justify-center py-10">
+      <div className="flex flex-col justify-center mb-8 sm:mb-20 py-10">
         {/* <h3 className="font-title text-center uppercase text-4xl md:text-6xl leading-tight text-amber-50">
           Why Choose <br /> THUNK 3
         </h3> */}
@@ -416,16 +416,16 @@ className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/3 h-85 w-[1px
   className=" text-center text-3xl md:text-6xl leading-tight"
 />
         {/* <p className="mt-6 text-center text-lg md:text-xl text-[#A61313]">As Your New EV Conversion Motor?</p> */}
-        <AnimatedTextt
+        {/* <AnimatedTextt
   text={`As Your New EV Conversion Motor?`}
   className="text-center text-4xl md:text-6xl leading-tigh  text-lg md:text-xl text-[#A61313]"
-/>
+/> */}
       </div>
       <div>
   
         <div className="relative min-h-screen bg-black text-white font-sans ">
 
-    <div className="flex justify-center mb-12">
+    <div className="flex justify-center lg:mb-12">
         <motion.img
           initial={{ opacity: 0, y: 10 }}          // hidden + pushed down
   whileInView={{ opacity: 1, y: 0 }}       // visible + natural place
@@ -434,7 +434,7 @@ className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/3 h-85 w-[1px
     duration: 1.5,
     ease: "easeInOut",
   }}
-        src="/Group 15.png" alt="Thunk3 EV Motor" className="absolute w-9/12 h-auto z-12"/>
+        src="/Group 215.png" alt="Thunk3 EV Motor" className="absolute w-11/12  -top-4   sm:-top-16 h-auto z-12"/>
          <motion.div 
                initial={{ opacity: 0, y: 40 }}          // hidden + pushed down
   whileInView={{ opacity: 0.5, y: 0 }}       // visible + natural place
@@ -443,7 +443,7 @@ className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/3 h-85 w-[1px
     duration: 1.5,
     ease: "easeInOut",
   }}
-   className={`absolute top-40 left-[30%]  w-[100px] h-[120px]  md:w-[300px] lg:h-[220px]  xl:w-[600px] xl:h-[220px] bg-white blur-[120px] rounded-full z-0 transition-opacity duration-2000`}
+   className={`absolute top-60 left-[30%]  w-[100px] h-[120px]  md:w-[300px] lg:h-[220px]  xl:w-[600px] xl:h-[220px] bg-white blur-[120px] rounded-full z-0 transition-opacity duration-2000`}
     ></motion.div>
     </div>
    <div className="max-w-3xl md:max-w-md  lg:max-w-xl  xl:max-w-3xl mx-auto  flex items-end justify-around md:justify-between px-10 md:px-0 z-0">
@@ -462,14 +462,14 @@ className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/3 h-85 w-[1px
         transition={{
           duration: 1.5,
           ease: "easeInOut",
-        }} className="w-px  h-18  sm:h-48 bg-[#2F2F2F]"></motion.div > 
+        }} className="w-px  h-28  sm:h-68 bg-[#2F2F2F]"></motion.div > 
         <motion.div initial={{ scaleY: 0, opacity: 0 }}
         whileInView={{ scaleY: -1, opacity: 1 }}
         viewport={{ once: true, amount: 0.1 }}
         transition={{
           duration: 1.5,
           ease: "easeInOut",
-        }} className="w-px h-40 md:h-90 lg:h-120 xl:h-140 sm:mt-10 bg-[#2F2F2F]"></motion.div > 
+        }} className="w-px h-50 md:h-110 lg:h-120 xl:h-140 lg:mt-10 bg-[#2F2F2F]"></motion.div > 
     </div>
   {/* <div className="hidden md:block my-6 w-[1px]  h-32 flex-1 bg-gray-600 ml-4"></div> */}
     <div className="text-center sm:text-start mx-auto bg-[#1C1C1C]/50  rounded-2xl p-8 md:p-16  mb-4 sm:mb-7  shadow-xl">

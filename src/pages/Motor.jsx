@@ -160,7 +160,7 @@ export default function Motor() {
         duration: 1.5,
         ease: "easeInOut",
       }}
-            src="/Group 15.png" alt="Thunk3 EV Motor" className=" w-9/12 h-auto z-12"/>
+            src="/Group 215.png" alt="Thunk3 EV Motor" className=" w-9/12 h-auto z-12"/>
              <motion.div 
                    initial={{ opacity: 0, y: 40 }}          
        whileInView={isMobile ? { opacity: 1, y: 0 } : { opacity: 0.5, y: 0 }}     
