@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import React, { useState, useEffect } from 'react';
 
 
-const text = `Innovation in\nElectrification Starts Here`;
+const text = `Book your\nElectrification Experience`;
 
 
 
@@ -53,13 +53,16 @@ function AnimatedText({ text, className ,lineClasses=[]  }) {
 
 
 
-export default function Contact() {
+export default function Preorder() {
      const [formData, setFormData] = useState({
     name: "",
     lastName: "",
     email: "",
     phone: "",
-    message: "",
+    timeframe: "",
+    carconverting: "",
+    aya: "",
+    location: "",
   });
 
   const [status, setStatus] = useState({ loading: false, success: "", error: "" });
@@ -69,7 +72,7 @@ export default function Contact() {
   setStatus({ loading: true, success: "", error: "" });
 
   try {
-    const res = await fetch("/api/contacts", {
+    const res = await fetch("/api/order", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
@@ -79,7 +82,7 @@ export default function Contact() {
 
     const newContact = await res.json();
     setStatus({ loading: false, success: "✅ Your message has been sent!", error: "" });
-    setFormData({ firstName: "", lastName: "", email: "", phone: "", message: "" });
+    setFormData({ name: "", lastName: "", email: "", phone: "", timeframe: "", carconverting: "", aya: "",location: "" });
   } catch (err) {
     console.error(err);
     setStatus({ loading: false, success: "", error: "❌ Something went wrong. Please try again." });
@@ -88,7 +91,7 @@ export default function Contact() {
 
   // Optional: load contacts from DB when page loads
   useEffect(() => {
-    fetch("/api/contacts")
+    fetch("/api/order")
       .then((res) => res.json())
       .then((data) => setContacts(data));
   }, []);
@@ -156,7 +159,7 @@ Whether you are examining your first EV conversion motor, searching for a suitab
       
       {/* Heading */}
                <AnimatedText
-        text={`Get In Touch`}
+        text={`book your order`}
         className="text-2xl text-center pb-10 sm:text-3xl uppercase"
       />
 
@@ -170,9 +173,10 @@ Whether you are examining your first EV conversion motor, searching for a suitab
             <input
               type="text"
               id="firstName"
+              placeholder="Required*"
                value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              className="w-full bg-[#333333] border border-[#555555] rounded-lg py-3 px-4 text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-gray-600"
+              className="w-full bg-[#333333] border border-[#555555] rounded-lg py-3 px-4 text-white placeholder-[#646464] focus:outline-none focus:ring-1 focus:ring-gray-600"
             />
           </div>
           <div className="flex-1">
@@ -182,9 +186,10 @@ Whether you are examining your first EV conversion motor, searching for a suitab
             <input
               type="text"
               id="lastName"
+              placeholder="Required*"
                value={formData.lastName}
                 onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
-              className="w-full bg-[#333333] border border-[#555555] rounded-lg py-3 px-4 text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-gray-600"
+              className="w-full bg-[#333333] border border-[#555555] rounded-lg py-3 px-4 text-white placeholder-[#646464] focus:outline-none focus:ring-1 focus:ring-gray-600"
             />
           </div>
         </div>
@@ -198,9 +203,10 @@ Whether you are examining your first EV conversion motor, searching for a suitab
             <input
               type="email"
               id="email"
+              placeholder="Required*"
                value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              className="w-full bg-[#333333] border border-[#555555] rounded-lg py-3 px-4 text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-gray-600"
+              className="w-full bg-[#333333] border border-[#555555] rounded-lg py-3 px-4 text-white placeholder-[#646464] focus:outline-none focus:ring-1 focus:ring-gray-600"
             />
           </div>
           <div className="flex-1">
@@ -210,30 +216,79 @@ Whether you are examining your first EV conversion motor, searching for a suitab
             <input
               type="tel"
               id="phone"
+              placeholder="Required*"
                 value={formData.phone}
                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-              className="w-full bg-[#333333] border border-[#555555] rounded-lg py-3 px-4 text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-gray-600"
+              className="w-full bg-[#333333] border border-[#555555] rounded-lg py-3 px-4 text-white placeholder-[#646464] focus:outline-none focus:ring-1 focus:ring-gray-600"
+            />
+          </div>
+        </div>
+ <div className="flex flex-col sm:flex-row gap-6">
+          <div className="flex-1">
+            <label htmlFor="timeframe" className="block text-[#757575] text-base font-light mb-2">
+              Timeframe
+            </label>
+            <input
+              type="text"
+              id="timeframe"
+              placeholder="Immediate, next 3 months, TBD"
+               value={formData.timeframe}
+                onChange={(e) => setFormData({ ...formData, timeframe: e.target.value })}
+              className="w-full bg-[#333333] border border-[#555555] rounded-lg py-3 px-4 text-white placeholder-[#646464] focus:outline-none focus:ring-1 focus:ring-gray-600"
+            />
+          </div>
+          <div className="flex-1">
+            <label htmlFor="carconverting" className="block text-[#757575] text-base font-light mb-2">
+              Car you are converting
+            </label>
+            <input
+              type="text"
+              id="carconverting"              
+              placeholder="Optional*"
+                value={formData.carconverting}
+                onChange={(e) => setFormData({ ...formData, carconverting: e.target.value })}
+              className="w-full bg-[#333333] border border-[#555555] rounded-lg py-3 px-4 text-white placeholder-[#646464] focus:outline-none focus:ring-1 focus:ring-gray-600"
             />
           </div>
         </div>
 
-        {/* Full-Width Message Textarea */}
-        <div>
-          <label htmlFor="message" className="block text-[#757575] text-base font-light mb-2">
-            Message
-          </label>
-          <textarea
-            id="message"
-            rows="6"
-            value={formData.message}
-              onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-            className="w-full bg-[#333333] border border-[#555555] rounded-lg py-3 px-4 text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-gray-600 resize-none"
-          ></textarea>
+ <div className="flex flex-col sm:flex-row gap-6">
+          <div className="flex-1">
+            <label htmlFor="aya" className="block text-[#757575] text-base font-light mb-2">
+              Are you a
+            </label>
+            <input
+              type="text"
+              id="aya"
+              placeholder="DIYer, Conversion Shop, Reseller, Other"
+               value={formData.aya}
+                onChange={(e) => setFormData({ ...formData, aya: e.target.value })}
+              className="w-full bg-[#333333] border border-[#555555] rounded-lg py-3 px-4 text-white placeholder-[#646464] focus:outline-none focus:ring-1 focus:ring-gray-600"
+            />
+          </div>
+          <div className="flex-1">
+            <label htmlFor="location" className="block text-[#757575] text-base font-light mb-2">
+              Location – City, State
+            </label>
+            <input
+              type="text"
+              id="location"
+              
+              placeholder="Optional*"
+                value={formData.location}
+                onChange={(e) => setFormData({ ...formData, location: e.target.value })}
+              className="w-full bg-[#333333] border border-[#555555] rounded-lg py-3 px-4 text-white placeholder-[#646464] focus:outline-none focus:ring-1 focus:ring-gray-600"
+            />
+          </div>
         </div>
+
+
+        {/* Full-Width Message Textarea */}
+     
 
         {/* Submit Button */}
         <motion.button
-                               type="submit"    className="w-fit relative  text-white overflow-hidden uppercase px-8 text-xs sm:text-base  py-2 rounded-full border bg-[#666666]/28 border-gray-400  font-body group"
+                               type="submit"    className="w-fit relative text-white overflow-hidden uppercase px-8 text-xs sm:text-base  py-2 rounded-full border bg-[#666666]/28 border-gray-400  font-body group"
                                  initial={{ opacity: 0, x: 100 }}
                                  whileInView={{ opacity: 1, x: 0 }}
                                  viewport={{ once: true, amount: 0.1 }}
@@ -242,11 +297,11 @@ Whether you are examining your first EV conversion motor, searching for a suitab
                                >
                                  <span className="block h-[1.5em] sm:h-[1.2em] overflow-hidden">
                                    {/* First layer */}
-                                   <span className=" block transition-transform duration-500 ease-in-out group-hover:-translate-y-full">
+                                   <span className=" block font-body transition-transform duration-500 ease-in-out group-hover:-translate-y-full">
                                     {status.loading ? "Sending..." : "Send Message"}  • 
                                    </span>
                                    {/* Second layer */}
-                                   <span className="block transition-transform duration-500 ease-in-out group-hover:-translate-y-full">
+                                   <span className="block font-body transition-transform duration-500 ease-in-out group-hover:-translate-y-full">
                                     {status.loading ? "Sending..." : "Send Message"} • 
                                    </span>
                                  </span>

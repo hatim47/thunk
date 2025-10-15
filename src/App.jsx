@@ -7,6 +7,7 @@ import News from "./pages/News";
 import Gallery from "./pages/Gallery";
 import Video from "./pages/Video";
 import Login from "./pages/Login";
+import Preorder from "./pages/Preorder";
 import TC from "./pages/Terms & Condition";
 import PP from "./pages/Privacy Policy";
 import AdminContacts from "./pages/AdminContacts";
@@ -23,6 +24,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
 
         <Route path="/contact" element={<Contact />} />
+         <Route path="/pre-order" element={<Preorder />} />
         <Route path="/motor" element={<Motor />} />
         <Route path="/service" element={<Servies />} />
          <Route path="/new" element={<News />} />
