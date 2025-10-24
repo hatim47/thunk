@@ -26,7 +26,7 @@ export default function Head() {
         <div className="flex gap-3">
         <motion.a
                  href="/contact"              
-                    className="w-fit font-my relative  overflow-hidden uppercase px-8 text-white shadow-xl shadow-black/30 py-2 rounded-full border bg-[#666666]/28 border-gray-400 text-sm  sm:text-lg font-body group"
+                    className="w-fit font-my relative  overflow-hidden uppercase px-2 lg:px-8 text-white shadow-xl shadow-black/30 py-2 rounded-full border bg-[#666666]/28 border-gray-400 text-xs  sm:text-lg font-body group"
                     initial={{ opacity: 0, x: 100 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true, amount: 0.1 }}
@@ -45,7 +45,7 @@ export default function Head() {
                   </motion.a>
                <motion.button
                onClick={() => setIsOpen(true)}
-                    className="w-fit font-my relative overflow-hidden px-8 text-white shadow-xl shadow-black/30 py-2 rounded-full border bg-[#666666]/28 border-gray-400 text-sm  sm:text-lg font-body group"
+                    className="w-fit font-my relative overflow-hidden px-3 lg:px-8 text-white shadow-xl shadow-black/30 py-2 rounded-full border bg-[#666666]/28 border-gray-400 text-xs  sm:text-lg font-body group"
                     initial={{ opacity: 0, x: 100 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true, amount: 0.1 }}
@@ -90,6 +90,8 @@ export default function Head() {
   <Link to="/new" className="font-title">News</Link>
   <Link to="/gallery" className="font-title">Gallery</Link>
   <Link to="/video" className="font-title">Video</Link>
+    <Link to="/pre-order" className="font-title">pre-orders</Link>
+    <Link to="/download" className="font-title">download</Link>
   <Link to="/contact" className="font-title">Contact Us</Link>
         </nav>
 

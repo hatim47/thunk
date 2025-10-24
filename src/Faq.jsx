@@ -31,6 +31,23 @@ const faqData = [
     question: "IS THE THUNK3 ELECTRIC MOTOR GOOD FOR CLASSIC CAR CONVERSIONS?",
     answer: "Yes. The Thunk 3 is designed specifically for seamless integration into classic cars. It delivers excellent weight balance, high performance, and reliability, making it one of the top choices for EV conversions. With its compact size and optimal placement, you gain the freedom to design your project without many of the usual space or installation constraints.",
   },
+   {
+    id: 6,
+    question: "WHAT OPTIONS ARE AVAILABLE?",
+    answer: "The Thunk3 comes as Standard or Performance. The Torque Trends gear reduction box comes with all of their options including ParkLock, fixed or slip yokes or billet slip yoke. See their website for more details",
+   linkText: "EV Reduction Gearbox - EV Transmission | Torque Trends Inc",
+  linkUrl: "https://torquetrends.com"
+  },
+  {
+    id: 7,
+    question: "WHAT CONTROLLERS DOES THIS MOTOR WORK WITH?",
+    answer: "You can use ANY controller of your choice that works with the Tesla Model 3/Y. We use EV Controls T2C as it fits our philosophy of powerful but simple but other options are available.",
+  },
+    {
+    id: 8,
+    question: "WHAT COMES WITH THE MOTOR?",
+    answer: "The motor comes with the Torque Trends Torque Box with your options included, the inverter which is mounted remotely, 3 phase wiring, inverter control wiring, and the oil pump/filter with supply lines, also remotely mounted.",
+  },
 ];
 
 /**
@@ -43,7 +60,7 @@ const faqData = [
  * @param {function} props.onToggle - Function to handle click and update activeId.
  */
   const lines = text.split("\n");
-const AccordionItem = ({ id, question, answer, activeId, onToggle }) => {
+const AccordionItem = ({ id, question, answer,linkUrl,linkText , activeId, onToggle }) => {
 
   const [isCarLitOnLoad, setIsCarLitOnLoad] = useState(false);
 
@@ -108,7 +125,21 @@ const AccordionItem = ({ id, question, answer, activeId, onToggle }) => {
         className={`transition-all duration-500 ease-in-out overflow-hidden ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
       >
         <div className="p-6 pt-0 text-gray-400 text-base leading-relaxed border-t border-gray-800">
-          <p>{answer}</p>
+          <p>{answer}
+{linkUrl && (
+        <a
+          href={linkUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-red-800 hover:text-red-900 underline mt-2  ps-1 "
+        >
+          {linkText}
+        </a>
+      )}
+
+          </p>
+             
+      
         </div>
       </div>
     </motion.div>

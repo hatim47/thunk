@@ -237,14 +237,14 @@ export default function Home() {
 
       {/* Text Content */}
       <div className=" mt-12 text-center md:text-left">
-        <div className="flex flex-col gap-10  sm:flex-row  sm:items-end  ">
+        <div className="flex flex-col gap-5  lg:gap-10  sm:flex-row  sm:items-end  ">
 
 
        
      
 <AnimatedText
   text={`THUNK\nREIMAGINES`}
-  className=" w-full xl:w-7/12 lg:w-7/12 text-3xl md:text-7xl leading-tight"
+  className="w-full xl:w-7/12   md:w-12/12  lg:w-10/12 text-3xl md:text-6xl lg:text-7xl leading-tight"
 />
  
         <div className="flex w-full items-center justify-center md:justify-end mb-6">
@@ -596,7 +596,7 @@ className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/3 h-85 w-[1px
      
      <Slider/>
      <section className="relative w-full max-w-7xl px-6 pt-10 pb-20 flex flex-col items-center justify-center  text-white ">
-    <div className="w-full flex self-center flex-col sm:grid sm:grid-cols-10 gap-10 ">
+    <div className="w-full flex self-center items-center flex-col sm:grid sm:grid-cols-10 gap-10 ">
     <motion.div
      initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -609,11 +609,16 @@ className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/3 h-85 w-[1px
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.1 }}
         transition={{ duration: 1.5, ease: "easeInOut" }}
-         className="flex flex-col gap-5 md:col-span-6 sm:text-left">
+         className="flex flex-col gap-5 md:col-span-5 sm:text-left">
       <span className="font-bold text-base md:text-lg xl:text-xl text-white">“Instead of replacing the cars we love, we reimagine them for  the electric future.”</span>
-      <p className="font-light text-base  xl:text-xl">With the Thunk3 motor, your classic becomes a future-ready <br className="hidden xl:block" />electric machine. Driving an EV makes your classic perform <br className="hidden xl:block" />like car you’ve always wanted!</p>
+      <p className="font-light text-base  xl:text-xl">With the Thunk3 motor, your classic becomes a future-ready electric machine. Driving an EV makes your classic perform like car you’ve always wanted!</p>
     </motion.div>
-
+    <motion.img  initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.1 }}
+        transition={{ duration: 1.5, ease: "easeInOut" }}
+    
+    src="/image 37.png" className="md:col-span-2 w-4/12 md:w-7/12 md:mt-10 flex justify-center" alt="" />
     </div>
 
 

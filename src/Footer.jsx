@@ -83,7 +83,10 @@ const texts = 'Lock in your custom EV motor and be one of the first to experienc
                     </span>
                   </MotionLink>
     </motion.div>
-
+  <motion.img  initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.1 }}
+        transition={{ duration: 1.5, ease: "easeInOut" }} src="/image 37.png" className="mt-5 md:mt-0 md:ms-10 w-4/12 md:w-[10%]" alt="" />
     </div>
 
     </section>

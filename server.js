@@ -104,6 +104,20 @@ app.post("/api/contacts", async (req, res) => {
   }
 });
 
+app.post("/api/order", async (req, res) => {
+  const { name, lastName, phone, email, timeframe,carconverting,aya,location } = req.body;
+  try {
+    await db.execute(
+      "INSERT INTO orders (name, email, last_name, phone, timeframe, carconverting, aya, location) VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
+      [name, email, lastName, phone, timeframe, carconverting, aya, location]
+    );
+    res.json({ success: true, message: "Contact saved!" });
+  } catch (err) {
+    console.error("❌ Contact error:", err);
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
 // Admin login
 app.post("/api/login", async (req, res) => {
   const { username, password } = req.body;
@@ -128,6 +142,16 @@ app.post("/api/login", async (req, res) => {
 app.get("/api/contacts", async (req, res) => {
   try {
     const [rows] = await db.execute("SELECT * FROM contact ORDER BY id DESC");
+    res.json(rows);
+  } catch (err) {
+    console.error("❌ Fetch error:", err);
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+app.get("/api/orders", async (req, res) => {
+    try {
+    const [rows] = await db.execute("SELECT * FROM orders ORDER BY id DESC");
     res.json(rows);
   } catch (err) {
     console.error("❌ Fetch error:", err);

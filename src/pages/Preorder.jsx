@@ -98,16 +98,13 @@ export default function Preorder() {
     
      
       const lines = text.split("\n");
-     
-    // Variants for parent (controls timing of children)
-    
-    
+  
   return (
     <>
   <Head></Head>
 
     <section className=" relative -top-25  flex items-end  h-[60vh]  sm:h-[100vh] w-full px-6  bg-cover bg-center "
-      style={{ backgroundImage: "url('/Group 26773.png')" }}>    
+      style={{ backgroundImage: "url('/Group 26773 (1).png')" }}>    
        
                                         </section>
                                           <section className=" relative w-full flex flex-col items-center justify-end text-center text-white sm:pb-30 ">

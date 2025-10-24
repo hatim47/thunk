@@ -108,11 +108,11 @@ export default function Servies() {
   return (
     <>
      <Head></Head>
-   <section className="relative  -top-25 flex items-end  h-[60vh]  sm:h-[100vh] w-full px-6  bg-cover bg-center  sm:mb-30"
+   <section className="relative  -top-25 flex items-end  h-[60vh]  sm:h-[100vh] w-full px-6  bg-cover bg-center  lg:mb-30"
     style={{ backgroundImage: "url('/Group 26769.png')" }}>    
          
          
-       <section className="relative w-full flex flex-col items-center justify-end text-center text-white sm:pb-30 ">
+       <section className="relative w-full flex flex-col items-center justify-end text-center text-white lg:pb-30 ">
                           {/* Content */}
                          <div className="z-10 max-w-4xl px-6">
                         <h1 className="text-3xl md:text-6xl font-medium font-title uppercase">
@@ -155,13 +155,13 @@ export default function Servies() {
                         </section>        
             </section>
 
-<section className="relative w-full  flex flex-col items-center justify-end text-center text-white my-20 sm:my-30  ">
+<section className="relative w-full  flex flex-col items-center justify-end text-center text-white my-20 lg:my-30  ">
 
-        <div className="max-w-7xl px-6 flex flex-col-reverse sm:flex-row gap-20  xl:gap-70 items-center justify-between ">
-            <div className="flex-1 text-center items-center sm:items-start sm:text-start flex flex-col gap-5">
+        <div className="max-w-7xl px-6 flex flex-col-reverse lg:flex-row gap-20 xl:gap-70 items-center justify-between ">
+            <div className="flex-1 text-center items-center lg:items-start lg:text-start flex flex-col gap-5">
                 <AnimatedText
         text={`Electrify\nwith THUNK`}
-        className="text-2xl  sm:text-6xl uppercase"
+        className="text-2xl sm:text-6xl uppercase"
       />
       <motion.p 
           initial={{ opacity: 0, x: -100 }}
@@ -215,7 +215,7 @@ export default function Servies() {
         </div>
 
 </section>
-<section className="relative w-full flex flex-col gap-4 items-center justify-end text-center text-white sm:my-50  ">
+<section className="relative w-full flex flex-col gap-4 items-center justify-end text-center text-white my-25 lg:my-50  ">
 
 <div className="px-6">
              <AnimatedText
@@ -282,10 +282,10 @@ export default function Servies() {
 
 </section>
 
- <section className=" max-w-7xl text-white  px-6 flex flex-col items-center mt-30 sm:mt-2 pb-20 sm:pb-50">
+ <section className="max-w-7xl text-white px-6 flex flex-col items-center mt-30 sm:mt-2 pb-20 lg:pb-50">
       
       {/* Car Image */}
-      <div className="relative w-full  h-[20vh] sm:h-[30vh] md:h-[40vh] lg:h-[485px]  xl:h-[610px] rounded-2xl "> 
+      <div className="relative w-full  h-[20vh] sm:h-[30vh] md:h-[34vh] lg:h-[485px]  xl:h-[610px] rounded-2xl "> 
 <motion.div
     // Anchor the element to the bottom of its relative parent
     className="absolute bottom-0 left-0 w-full rounded-2xl overflow-hidden flex items-center justify-center"
@@ -315,7 +315,7 @@ export default function Servies() {
 
       {/* Text Content */}
       <div className=" mt-12 text-center md:text-left">
-        <div className="flex flex-col gap-10  sm:flex-row  sm:items-end  ">
+        <div className="flex flex-col gap-10  lg:flex-row  lg:items-end  ">
 
 
        
@@ -326,7 +326,7 @@ export default function Servies() {
 />
 
  
-        <div className="flex w-full items-center justify-center md:justify-end  mb-6">
+        <div className="flex w-full items-center justify-center lg:justify-end  mb-6">
       
            <motion.div
         className="h-[1px] w-7/12 bg-[#2F2F2F]"
