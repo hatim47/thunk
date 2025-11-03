@@ -21,7 +21,7 @@ export default function Head() {
       }`}
     ></div>
         <Link to="/" className="text-xl font-bold text-gray-800">
-          <img src="/Layer_1.png" className="w-5/12  sm:w-9/12" alt="Logo" />
+          <img src="/Layer_11.png" className="w-5/12  sm:w-9/12" alt="Logo" />
         </Link>       
         <div className="flex gap-3">
         <motion.a
@@ -74,7 +74,7 @@ export default function Head() {
         }`}
       >
         <div className="flex items-center justify-between py-6  px-15">
-          <img src="/Layer_1.png" className="w-24 sm:w-5/12 pe-7" alt="Logo" />
+          <img src="/Layer_11.png" className="w-24 sm:w-5/12 pe-7" alt="Logo" />
           <button
             onClick={() => setIsOpen(false)}
             className="text-2xl font-bold text-white "
@@ -90,7 +90,7 @@ export default function Head() {
   <Link to="/new" className="font-title">News</Link>
   <Link to="/gallery" className="font-title">Gallery</Link>
   <Link to="/video" className="font-title">Video</Link>
-    <Link to="/pre-order" className="font-title">pre-orders</Link>
+    <Link to="/contact" className="font-title">pre-orders</Link>
     <Link to="/download" className="font-title">download</Link>
   <Link to="/contact" className="font-title">Contact Us</Link>
         </nav>

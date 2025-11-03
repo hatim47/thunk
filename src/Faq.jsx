@@ -8,33 +8,33 @@ const text = `Frequently
 const faqData = [
   {
     id: 1,
-    question: "WHAT MAKES THE THUNK 3 MOTOR DIFFERENT FROM OTHER EV CONVERSION MOTORS?",
-    answer: "The Thunk3 is the first affordable, high-performance EV conversion motor designed specifically for classic cars. Unlike standard front-mounted motors, it installs in the transmission tunnel, freeing up the engine bay for batteries. No other motor currently offers this benefit. Rear-mounted motors often cut into the gas tank area, reducing space for batteries, but the Thunk3 allows for both front and rear placement. This means more range, better balance, and superior handling",
+    question: <>WHAT MAKES THE THUNK3<span className="font-sans text-sm align-super">™</span> MOTOR DIFFERENT FROM OTHER EV CONVERSION MOTORS?</>,
+    answer: "The THUNK3™ is the first affordable, high-performance EV conversion motor designed specifically for classic cars. Unlike standard front-mounted motors, it installs in the transmission tunnel, freeing up the engine bay for batteries. No other motor currently offers this benefit. Rear-mounted motors often cut into the gas tank area, reducing space for batteries, but the THUNK3™  allows for both front and rear placement. This means more range, better balance, and superior handling",
   },
   {
     id: 2,
-    question: "HOW MUCH POWER DOES THE THUNK 3 DELIVER?",
-    answer: "The Thunk 3 generates 220+ kW (≈300 HP) with a voltage range of 350 to 400 V. That means instant torque, seamless acceleration, and performance that rivals modern EVs while maintaining the soul of your classic.",
+    question: <>HOW MUCH POWER DOES THE THUNK3<span className="font-sans text-sm align-super">™</span> DELIVER?</>,
+    answer: "The THUNK3™ generates 220+ kW (≈300 HP) with a voltage range of 350 to 400 V. That means instant torque, seamless acceleration, and performance that rivals modern EVs while maintaining the soul of your classic.",
   },
   {
     id: 3,
     question: "WHAT IS THE EV MOTOR PRICE?",
-    answer: "The Thunk 3 EV motor starts at $18,995. Built on Tesla Model 3/Y and Model 3/Y Performance technology with a Torque Trends gearbox, it offers a cost-effective solution for enthusiasts and shops looking to use EV motors that balance price, performance, and trusted technology.",
+    answer: "The THUNK3™  EV motor starts at $18,995. Built on Tesla Model 3/Y and Model 3/Y Performance technology with a Torque Trends gearbox, it offers a cost-effective solution for enthusiasts and shops looking to use EV motors that balance price, performance, and trusted technology.",
   },
   {
     id: 4,
     question: "WHY CONVERT MY CLASSIC CAR WITH AN ELECTRIC CAR CONVERSION MOTOR?",
-    answer: "Classic cars were built to last, but their engines often limit reliability and usability today. With the Thunk3 you can extend the lifespan of your vehicle, reduce maintenance, and enjoy clean, modern performance without sacrificing style.",
+    answer: "Classic cars were built to last, but their engines often limit reliability and usability today. With the THUNK3™ you can extend the lifespan of your vehicle, reduce maintenance, and enjoy clean, modern performance without sacrificing style.",
   },
     {
     id: 5,
-    question: "IS THE THUNK3 ELECTRIC MOTOR GOOD FOR CLASSIC CAR CONVERSIONS?",
-    answer: "Yes. The Thunk 3 is designed specifically for seamless integration into classic cars. It delivers excellent weight balance, high performance, and reliability, making it one of the top choices for EV conversions. With its compact size and optimal placement, you gain the freedom to design your project without many of the usual space or installation constraints.",
+    question: <>IS THE THUNK3<span className="font-sans text-sm align-super">™</span> ELECTRIC MOTOR GOOD FOR CLASSIC CAR CONVERSIONS?</>,
+    answer: "Yes. The THUNK3™  is designed specifically for seamless integration into classic cars. It delivers excellent weight balance, high performance, and reliability, making it one of the top choices for EV conversions. With its compact size and optimal placement, you gain the freedom to design your project without many of the usual space or installation constraints.",
   },
    {
     id: 6,
     question: "WHAT OPTIONS ARE AVAILABLE?",
-    answer: "The Thunk3 comes as Standard or Performance. The Torque Trends gear reduction box comes with all of their options including ParkLock, fixed or slip yokes or billet slip yoke. See their website for more details",
+    answer: "The THUNK3™  comes as Standard or Performance. The Torque Trends gear reduction box comes with all of their options including ParkLock, fixed or slip yokes or billet slip yoke. See their website for more details",
    linkText: "EV Reduction Gearbox - EV Transmission | Torque Trends Inc",
   linkUrl: "https://torquetrends.com"
   },

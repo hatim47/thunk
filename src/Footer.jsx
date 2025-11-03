@@ -8,7 +8,7 @@ Orders Now!`;
    const lines = text.split("\n");
 const Footer = () => {
  const MotionLink = motion(Link);
-const texts = 'Lock in your custom EV motor and be one of the first to experience the Thunk3 advantage.';
+const texts = 'Lock in your custom EV motor and be one of the first to experience the THUNK3™ advantage.';
 
   return (
     <> 
@@ -86,10 +86,10 @@ const texts = 'Lock in your custom EV motor and be one of the first to experienc
   <motion.img  initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.1 }}
-        transition={{ duration: 1.5, ease: "easeInOut" }} src="/image 37.png" className="mt-5 md:mt-0 md:ms-10 w-4/12 md:w-[10%]" alt="" />
+        transition={{ duration: 1.5, ease: "easeInOut" }} src="/image 377.png" className="mt-5 md:mt-0 md:ms-10 w-4/12 md:w-[10%]" alt="" />
     </div>
-
     </section>
+
     <footer className="bg-black w-full text-gray-400 py-10 mt-16 flex flex-col justify-center items-center">
       <div className="w-full max-w-7xl px-6 xl:px-0 flex flex-col sm:flex-row  justify-between ">
         
@@ -266,7 +266,7 @@ const texts = 'Lock in your custom EV motor and be one of the first to experienc
       </div>
  </div>
       <p className="mt-10 text-center text-baes text-gray-500">
-        © {new Date().getFullYear()} THUNK. All rights reserved.
+        © {new Date().getFullYear()} THUNK3™. All rights reserved.
       </p>
     </footer>
     </>

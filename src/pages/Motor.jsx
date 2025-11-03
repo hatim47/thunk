@@ -4,7 +4,7 @@ import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import React, { useState, useEffect } from 'react';
-const text = `The THUNK 3
+const text = `The THUNK3™
 At a Glance`;
 const BASE_DELAY = 2.5;
 const letterVariant = {
@@ -41,17 +41,19 @@ function AnimatedText({ text, className ,lineClasses=[]  }) {
             lineClasses[lineIndex] || "" 
           }`}>
           {Array.from(line).map((char, i) => (
-            <motion.span
-              key={i}
-              custom={i + lineIndex * 20} 
-              variants={letterVariantt}
-              initial="hidden"
-                whileInView="show"    
-  viewport={{ once: true, amount: 0.1 }} 
-              className="inline-block"
-            >
-              {char === " " ? "\u00A0" : char}
-            </motion.span>
+             <motion.span
+                         key={i}
+                         custom={i + lineIndex * 20}
+                         variants={letterVariantt}
+                         initial="hidden"
+                         whileInView="show"
+                         viewport={{ once: true, amount: 0.1 }}
+                         className={`inline-block ${
+                           char === "™" ? "font-sans text-lg align-super tracking-normal" : ""
+                         }`}
+                       >
+                         {char === " " ? "\u00A0" : char}
+                       </motion.span>
           ))}
         </span>
       ))}
@@ -160,7 +162,7 @@ export default function Motor() {
         duration: 1.5,
         ease: "easeInOut",
       }}
-            src="/Group 215.png" alt="Thunk3 EV Motor" className=" w-9/12 h-auto z-12"/>
+            src="/Group 215.png" alt="Thunk3™ EV Motor" className=" w-9/12 h-auto z-12"/>
              <motion.div 
                    initial={{ opacity: 0, y: 40 }}          
        whileInView={isMobile ? { opacity: 1, y: 0 } : { opacity: 0.5, y: 0 }}     
@@ -185,17 +187,18 @@ export default function Motor() {
                         <span key={lineIndex} className="block ">
                           {letters.map((char, i) => (
                             <motion.span
-                              key={i}
-                              initial={{ opacity: 1, y: -20 }}
-                              animate={{ opacity: 1, y: 0 }}
-                              transition={{
-                                duration: 0.5,
-                                 delay:  i * 0.05 + lineIndex * 0.3,  // stagger across lines
-                              }}
-                              className="inline-block"
-                            >
-                              {char === " " ? "\u00A0" : char}
-                            </motion.span>
+                                        key={i}
+                                        custom={i + lineIndex * 20}
+                                        variants={letterVariantt}
+                                        initial="hidden"
+                                        whileInView="show"
+                                        viewport={{ once: true, amount: 0.1 }}
+                                        className={`inline-block ${
+                                          char === "™" ? "font-sans text-lg align-super tracking-normal" : ""
+                                        }`}
+                                      >
+                                        {char === " " ? "\u00A0" : char}
+                                      </motion.span>
                           ))}
                         </span>
                       );
@@ -211,7 +214,7 @@ export default function Motor() {
         ease: "easeInOut",
       }}
                 className="text-base sm:text-xl mt-6 ">
-                    Every classic car has a story worth continuing, and the Thunk3 makes that possible. Built as an EV conversion motor, it slips neatly into the transmission tunnel while unlocking the power and efficiency of Tesla technology.
+                    Every classic car has a story worth continuing, and the THUNK3™  makes that possible. Built as an EV conversion motor, it slips neatly into the transmission tunnel while unlocking the power and efficiency of Tesla technology.
                     </motion.p>
                 </div>
             
@@ -236,7 +239,7 @@ export default function Motor() {
                    <section className="relative w-full flex flex-col items-center justify-center text-center text-white px-6 pt-20 sm:pb-6 ">
 
  <AnimatedText
-        text={`Key Features of the THUNK 3 EV\nConversion Motor`}
+        text={`Key Features of the THUNK3™ EV\nConversion Motor`}
         className="text-2xl mt-6 sm:text-6xl uppercase"
       />
 

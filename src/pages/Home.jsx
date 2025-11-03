@@ -44,14 +44,16 @@ function AnimatedText({ text, className ,lineClasses=[]  }) {
             lineClasses[lineIndex] || "" // 👈 apply custom class if provided
           }`}>
           {Array.from(line).map((char, i) => (
-            <motion.span
+           <motion.span
               key={i}
-              custom={i + lineIndex * 20} // 👈 offset delay for each line
+              custom={i + lineIndex * 20}
               variants={letterVariantt}
               initial="hidden"
-                whileInView="show"     // 👈 animate when in viewport
-  viewport={{ once: true, amount: 0.1 }} 
-              className="inline-block"
+              whileInView="show"
+              viewport={{ once: true, amount: 0.1 }}
+              className={`inline-block ${
+                char === "™" ? "font-sans text-lg align-super tracking-normal" : ""
+              }`}
             >
               {char === " " ? "\u00A0" : char}
             </motion.span>
@@ -181,7 +183,7 @@ export default function Home() {
       </h1>
 
     <AnimatedTextt
-        text={`THUNK reimagines that legacy with the\nThunk3 EV conversion motor`}
+        text={`THUNK reimagines that legacy with the\nTHUNK3™  EV conversion motor`}
         className="text-sm mt-6 sm:text-xl text-[#A61313]"
       />
     </div>
@@ -290,7 +292,7 @@ export default function Home() {
         transition={{ duration: 1.5, ease: "easeInOut" }}
         className="font-body text-gray-300 text-base sm:text-xl leading-relaxed">
           Every classic automobile carries history under its hood. THUNK reimagines that legacy with 
-          the Thunk3 EV conversion motor and a compact, powerful system that transforms timeless machines 
+          the THUNK3™  EV conversion motor and a compact, powerful system that transforms timeless machines 
           into high-performance electric vehicles. We love our classics but acknowledge the pain and challenges 
           of keeping decades-old technology on the road. THUNK is dedicated to preserving heritage while 
           eliminating the constant work, unreliability, and unsustainability of old ICE engines.
@@ -329,7 +331,7 @@ export default function Home() {
         transition={{ duration: 1.5, ease: "easeInOut" }}
         className="font-body text-base sm:text-xl text-gray-300 mb-4 ">
             The story of THUNK began with a passion for classic cars and a determination to keep them relevant in a changing world. 
-            What started as a vision grew into the development of the Thunk3 motor,
+            What started as a vision grew into the development of the THUNK3™  motor,
              a solution that integrates modern engineering with respect for legacy.
           </motion.p>
           <motion.p  initial={{ opacity: 0, x: -100 }}
@@ -338,7 +340,7 @@ export default function Home() {
         transition={{ duration: 1.5, ease: "easeInOut" }}
         className="font-body text-base sm:text-xl text-gray-300 mb-6">
           Our focus is on building products we can fully support.
-           Our first product is the Thunk3 motor, 
+           Our first product is the THUNK3™  motor, 
            with future plans to add complementary products such as battery boxes.
           </motion.p>
 
@@ -412,7 +414,7 @@ className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/3 h-85 w-[1px
           Why Choose <br /> THUNK 3
         </h3> */}
 <AnimatedText
-  text={`WHY CHOOSE\nTHUNK 3`}
+  text={`WHY CHOOSE\nTHUNK3™`}
   className=" text-center text-3xl md:text-6xl leading-tight"
 />
         {/* <p className="mt-6 text-center text-lg md:text-xl text-[#A61313]">As Your New EV Conversion Motor?</p> */}
@@ -483,10 +485,10 @@ className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/3 h-85 w-[1px
         <p className="text-sm md:text-lg  lg:text-xl mt-6 text-justify sm:text-start">
           The biggest challenge of converting a classic car is where to place the batteries.
            Most EV conversion motors sit in the engine bay, taking up valuable space.
-            The Thunk3 motor is designed to sit in the transmission tunnel,
+            The THUNK3™  motor is designed to sit in the transmission tunnel,
              freeing up the engine bay for batteries and other critical components.
               Unlike rear-mounted motors that protrude into the gas tank area,
-           the Thunk3 allows you to mount batteries in both the front (frunk!) 
+           the THUNK3™  allows you to mount batteries in both the front (frunk!) 
            and the rear. This creates excellent balance and handling — a benefit no other motor currently offers.
         </p>
     </div>
@@ -611,14 +613,14 @@ className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/3 h-85 w-[1px
         transition={{ duration: 1.5, ease: "easeInOut" }}
          className="flex flex-col gap-5 md:col-span-5 sm:text-left">
       <span className="font-bold text-base md:text-lg xl:text-xl text-white">“Instead of replacing the cars we love, we reimagine them for  the electric future.”</span>
-      <p className="font-light text-base  xl:text-xl">With the Thunk3 motor, your classic becomes a future-ready electric machine. Driving an EV makes your classic perform like car you’ve always wanted!</p>
+      <p className="font-light text-base  xl:text-xl">With the THUNK3™  motor, your classic becomes a future-ready electric machine. Driving an EV makes your classic perform like car you’ve always wanted!</p>
     </motion.div>
     <motion.img  initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.1 }}
         transition={{ duration: 1.5, ease: "easeInOut" }}
     
-    src="/image 37.png" className="md:col-span-2 w-4/12 md:w-7/12 md:mt-10 flex justify-center" alt="" />
+    src="/image 137.png" className="md:col-span-2 w-4/12 md:w-7/12 md:mt-10 flex justify-center" alt="" />
     </div>
 
 
