@@ -12,8 +12,8 @@ const images = [
     "/cars/Mask group (58).png",
     "/cars/Rectangle 85.png",
     "/cars/Mask group (59).png",
-    "/cars/Mask group (60).png",
-    "/cars/Mask group (61).png",
+    "/cars/Mask group (11).png",
+    "/cars/Mask group (12).png",
     "/cars/Mask group (62).png",
     "/cars/Mask group (63).png",
     "/cars/Mask group (64).png",
@@ -23,7 +23,18 @@ const images = [
 ];
 
 
-
+const captions = [
+  null,
+  null,
+  null,
+  "THUNK founder Doug Hertz with Daniel Paul from Southfield Classics",
+  "The new THUNK3 motor on display at the Torque Trends booth at SEMA 2025",
+  null,
+  null,
+  null,
+  null,
+  null
+];
 
 export default function Gallery() {
 const [open, setOpen] = useState(false);
@@ -102,30 +113,37 @@ See how best EV motors redefine performance and how THUNK sets the standard for 
   
     
       <div className="w-full grid grid-cols-12 gap-4 sm:gap-9 auto-rows-[200px]  sm:auto-rows-[390px]">
-        {images.map((src, i) => (
-          <div
-            key={i}
-            className={`overflow-hidden rounded-lg cursor-pointer ${
-              i < 3
-                ? "col-span-6 sm:col-span-4"
-                : i < 5
-                ? "col-span-6"
-                : i < 8
-                ? "col-span-6 sm:col-span-4"
-                : "col-span-6"
-            }`}
-            onClick={() => {
-              setIndex(i);
-              setOpen(true);
-            }}
-          >
-            <img
-              src={src}
-              alt={`Car ${i}`}
-              className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-            />
-          </div>
-        ))}
+{images.map((src, i) => (
+  <div
+    key={i}
+    className={`relative overflow-hidden rounded-lg cursor-pointer ${
+      i < 3
+        ? "col-span-6 sm:col-span-4"
+        : i < 5
+        ? "col-span-6"
+        : i < 8
+        ? "col-span-6 sm:col-span-4"
+        : "col-span-6"
+    }`}
+    onClick={() => {
+      setIndex(i);
+      setOpen(true);
+    }}
+  >
+    <img
+      src={src}
+      alt={`Car ${i}`}
+      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+    />
+
+    {/* CAPTION (only for images that have a caption) */}
+    {captions[i] && (
+      <div className="absolute bottom-0 left-0 right-0 bg-black/60 font-sans text-white text-lg p-2">
+        {captions[i]}
+      </div>
+    )}
+  </div>
+))}
       </div>
    
 

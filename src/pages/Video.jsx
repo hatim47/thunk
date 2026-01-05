@@ -15,8 +15,8 @@ Motor in Action`;
 
 const videos = [
   {
-    thumbnail: "/Mask group (68).png",
-    src: "/Mask group (68)-VEED.mp4",
+    thumbnail: "/image2.png",
+    src: "https://www.youtube.com/embed/5iWs-vm2xKQ?si=JBY9G4QzCPFT1_z8&start=628",
   },
   {
     thumbnail: "/Mask group (69).png",
@@ -32,7 +32,15 @@ const videos = [
   },
 ];
 
-
+videos.forEach((v) => {
+  if (v.src.includes("youtu.be")) {
+    v.srcEmbed = "https://www.youtube.com/embed/" + v.src.split("youtu.be/")[1].split("?")[0];
+  } else if (v.src.includes("youtube.com/watch")) {
+    v.srcEmbed = v.src.replace("watch?v=", "embed/").split("&")[0];
+  } else {
+    v.srcEmbed = v.src; // local mp4 stays the same
+  }
+});
 
 
 export default function Videos() {
@@ -60,8 +68,8 @@ export default function Videos() {
       style={{ backgroundImage: "url('/Group 26772.png')" }}>    
          <section className=" relative w-full flex flex-col items-center justify-end text-center text-white sm:pb-30 ">
                             {/* Content */}
-                           <div className="z-10 max-w-4xl px-6">
-                          <h1 className="text-3xl md:text-7xl font-medium font-title uppercase">
+                           <div className="z-10 max-w-5xl px-6">
+                          <h1 className="text-3xl md:text-5xl  lg:text-6xl  xl:text-7xl font-medium font-title uppercase">
                                {lines.map((line, lineIndex) => {
                               const letters = Array.from(line);
                               return (
@@ -105,7 +113,7 @@ Watch our process come alive as we demonstrate the power and precision of a cust
 <section className="max-w-7xl mx-auto px-6 pb-30 sm:pb-60">
       
     <div className="flex flex-col gap-6 py-10">
-      {videos.map((Videosa, i) => (
+      {/* {videos.map((Videosa, i) => (
         <div
           key={i}
           className="relative cursor-pointer rounded-lg overflow-hidden group"
@@ -114,14 +122,14 @@ Watch our process come alive as we demonstrate the power and precision of a cust
             setOpen(true);
           }}
         >
-          {/* Thumbnail */}
+  
           <img
             src={Videosa.thumbnail}
             alt={`Video ${i + 1}`}
             className="w-full h-auto object-cover"
           />
 
-          {/* Play Button Overlay */}
+         
           <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition">
             <div className="w-16 h-16 bg-white/80 rounded-full flex items-center justify-center">
               <svg
@@ -141,20 +149,94 @@ Watch our process come alive as we demonstrate the power and precision of a cust
             </div>
           </div>
         </div>
-      ))}
+      ))} */}
 
-      {/* Lightbox with video support */}
-      <Lightbox
-        open={open}
-        index={index}
-        close={() => setOpen(false)}
-        plugins={[Video]}
-        slides={videos.map((v) => ({
-          type: "video",
-          sources: [{ src: v.src }],
-        }))}
-      />
+
+ {videos.map((video, i) => (
+          <div
+            key={i}
+            className="relative cursor-pointer rounded-lg overflow-hidden group"
+            onClick={() => {
+              setIndex(i);
+              setOpen(true);
+            }}
+          >
+            {/* Thumbnail */}
+            <img
+              src={video.thumbnail}
+              alt={`Video ${i + 1}`}
+              className="w-full h-auto object-cover"
+            />
+
+            {/* Play Button Overlay */}
+            <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition">
+              <div className="w-16 h-16 bg-white/80 rounded-full flex items-center justify-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="black"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="black"
+                  className="w-8 h-8 ml-1"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M5.25 5.25v13.5l13.5-6.75-13.5-6.75z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        ))}
+      
+
+      {/* Modal */}
+
+
+
+
+{/* <Lightbox
+  open={open}
+  index={index}
+  close={() => setOpen(false)}
+  plugins={[Video]}
+  slides={videos.map((v) => ({
+    type: "video",
+    sources: [
+      {
+        src: v.srcEmbed, // must be https://www.youtube.com/embed/...
+        type: v.srcEmbed.includes("youtube.com/embed") ? "youtube" : "video/mp4",
+      },
+    ],
+  }))}
+/> */}
+
     </div>
+
+      {open && (
+        <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50">
+          <div className="relative w-[90%] max-w-3xl">
+            <button
+              onClick={() => setOpen(false)}
+              className="absolute -top-10 right-0 text-white text-3xl"
+            >
+              ×
+            </button>
+
+            <iframe
+              src={videos[index].src}
+              className="w-full h-[400px] rounded-lg"
+              title={`Video ${index + 1}`}
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
+      )}
+
+
     
     </section>
       <Footer></Footer>

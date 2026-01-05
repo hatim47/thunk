@@ -47,8 +47,7 @@ export default function Head() {
                onClick={() => setIsOpen(true)}
                     className="w-fit font-my relative overflow-hidden px-3 lg:px-8 text-white shadow-xl shadow-black/30 py-2 rounded-full border bg-[#666666]/28 border-gray-400 text-xs  sm:text-lg font-body group"
                     initial={{ opacity: 0, x: 100 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true, amount: 0.1 }}
+                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1.5, ease: "easeInOut" }}
                   >
                     <span className="block h-[1.2em] overflow-hidden">
@@ -89,6 +88,7 @@ export default function Head() {
   <Link to="/service" className="font-title">Partnership Services</Link>
   <Link to="/new" className="font-title">News</Link>
   <Link to="/gallery" className="font-title">Gallery</Link>
+   <Link to="/faq" className="font-title">FAQ</Link>
   <Link to="/video" className="font-title">Video</Link>
     <Link to="/contact" className="font-title">pre-orders</Link>
     <Link to="/download" className="font-title">download</Link>

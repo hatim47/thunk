@@ -8,6 +8,7 @@ import Gallery from "./pages/Gallery";
 import Video from "./pages/Video";
 import Login from "./pages/Login";
 import Download from "./pages/Download";
+import Faqs from "./pages/Faqs";
 import Preorder from "./pages/Preorder";
 import TC from "./pages/Terms & Condition";
 import PP from "./pages/Privacy Policy";
@@ -28,6 +29,7 @@ export default function App() {
          <Route path="/pre-order" element={<Preorder />} />
          <Route path="/download" element={<Download />} />
         <Route path="/motor" element={<Motor />} />
+        <Route path="/faq" element={<Faqs />} />
         <Route path="/service" element={<Servies />} />
          <Route path="/new" element={<News />} />
  <Route path="/gallery" element={<Gallery />} />

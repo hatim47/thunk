@@ -556,14 +556,122 @@ className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/3 h-85 w-[1px
         </span>
       </MotionLink>
 </div>
-
 </div>
       </div>
-
-
-
         </section>
+
+
+
+<section className="text-white pb-20 lg:py-60 px-6 ">
+      <div className="max-w-7xl px-6 mx-auto grid lg:grid-cols-10 gap-4  sm:gap-6 items-center ">
+        
+       
+        <div className="text-center  lg:text-left lg:col-span-6 ">
+      
+<AnimatedText
+  text={`thunk debut\nin sema!!`}
+  className="w-full xl:w-5/6 uppercase lg:w-10/12 text-3xl md:text-6xl mb-10 lg:mb-0 leading-tight"
+/>
+
+ <motion.img
+          initial={{ opacity: 1, x: 100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, amount: 0.1 }}
+        transition={{ duration: 1.5, ease: "easeInOut" }}
+            src="/Mask group (51).png"   // 👉 replace with your transparent car image
+            alt="Classic Car"
+            className="lg:hidden block  relative w-9/12 -right-12    sm:-right-20    z-1"
+          />
+         
+   
+
+          {/* Paragraphs */}
+          <motion.p 
+           initial={{ opacity: 0, x: -100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, amount: 0.1 }}
+        transition={{ duration: 1.5, ease: "easeInOut" }}
+        className="font-body text-base sm:text-xl text-gray-300 mb-4 mt-10 lg:mt-0">
+           THUNK3™ has proudly made its debut at the
+world-renowned SEMA Show. Where we uncover our groundbreaking EV conversion motor to thousands of automotive innovators.<br/>
+ In SEMA 2025, it’s not just our launch; it’s our innovation for change, where we’re modifying what “THUNK3™ EV conversion” means!
+          </motion.p>      
+        
+          <div className="flex items-center max-[431px]:justify-center">
+           
+            <MotionLink
+             to="/new"
+             initial={{ opacity: 0, x: -100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, amount: 0.1 }}
+        transition={{ duration: 1.5, ease: "easeInOut" }}
+
+            className="font-my group px-6 py-2 rounded-full bg-[#666666]/28 border border-gray-400  font-body transition">
+             
+             <span className="block h-[1.2em] overflow-hidden">
+          {/* First layer */}
+          <span className="block transition-transform duration-500 ease-in-out group-hover:-translate-y-full">
+           KNOW MORE •
+          </span>
+          {/* Second layer */}
+          <span className="block transition-transform duration-500 ease-in-out group-hover:-translate-y-full">
+            KNOW MORE •
+          </span>
+        </span>        
+            </MotionLink>
+
+            <motion.div
+            initial={{ scaleX: 0, opacity: 0 }}
+        whileInView={{ scaleX: 1, opacity: 1 }}
+        viewport={{ once: true, amount: 0.1 }}
+        transition={{
+          duration: 1.5,
+          ease: "easeInOut",
+        }}
+            className="md:left-[30%]  lg:left-[22.5%]  xl:left-[23.5%]  absolute md:w-6/12  lg:w-5/12 xl:w-5/12  h-[1px] flex-1 bg-[#2F2F2F]"></motion.div>
+          </div>
+        </div>
+        {/* Right Column (Image with vertical line) */}
+        <div className="relative flex justify-center md:justify-end">
+          {/* Vertical divider */}
+<motion.div 
+initial={{ scaleY: 0, opacity: 0 }}
+        whileInView={{ scaleY: 1, opacity: 1 }}
+        viewport={{ once: true, amount: 0.1 }}
+        transition={{
+          duration: 1.5,
+          ease: "easeInOut",
+        }}
+className="hidden lg:block absolute right-20 xl:right-10 top-1/2 -translate-y-1/3 h-85 w-[1px] bg-[#2F2F2F]"></motion.div>
+       </div>
+          {/* Car Image */}
+          <motion.img
+          initial={{ opacity: 1, x: 200 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, amount: 0.1 }}
+        transition={{ duration: 1.5, ease: "easeInOut" }}
+            src="/Mask group (51).png"   // 👉 replace with your transparent car image
+            alt="Classic Car"
+            className="hidden lg:block  w-4/12 xl:w-3/12 absolute  right-10  xl:right-30  md:pl-2 z-2"
+          />
+            <div
+      className={`hidden lg:block absolute right-30 w-[270px] h-[300px] bg-white blur-[180px] rounded-full z-0 transition-opacity duration-2000`}
+    ></div>
+      </div>
+    </section>
+
+
+
+
         <Faq></Faq>
+
+
+
+
+
+
+
+
 
      <section className="relative w-full  flex flex-col items-center justify-center text-center text-white sm:mt-10 sm:mb-30 ">
       {/* Content */}

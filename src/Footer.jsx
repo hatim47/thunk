@@ -15,7 +15,7 @@ const texts = 'Lock in your custom EV motor and be one of the first to experienc
   <section className="relativew  w-full bg-[#A61313] px-6 flex flex-col items-center justify-center text-white ">
  <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center py-5  sm:py-0 gap-2 sm:gap-0 ">
     <div className="text-center sm:text-left w-full sm:w-4/12 ">
-       <h3 className="font-my uppercase text-center sm:text-start text-lg md:text-4xl font-medium  flex justify-center sm:block">
+       <h3 className="font-my uppercase text-center sm:text-start text-lg  md:text-[27px] lg:text-3xl xl:text-4xl font-medium  flex justify-center sm:block">
        
         {lines.map((line, lineIndex) => {
                  const letters = Array.from(line);
@@ -52,14 +52,14 @@ const texts = 'Lock in your custom EV motor and be one of the first to experienc
           duration: 1.5,
           ease: "easeInOut",
         }}
-        className=" w-full sm:w-px h-px sm:h-32 border-b sm:border-b-0 sm:border-l border-white max-[430px]:mx-5 sm:mx-10 sm:my-5"></motion.div>
+        className=" w-full sm:w-px h-px sm:h-32 border-b sm:border-b-0 sm:border-l border-white max-[430px]:mx-5 mx-7 xl:mx-10 sm:my-5"></motion.div>
     < motion.div
      initial={{ opacity: 1, x: 100 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, amount: 0.1 }}
         transition={{ duration: 1.5, ease: "easeInOut" }}
-    className="flex flex-col gap-5 text-center sm:text-left items-center sm:items-start">
-<h6 className="text-white text-sm sm:text-lg m-0 p-0 w-full leading-relaxed  whitespace-pre-line">
+    className="flex flex-col gap-5 text-center sm:text-left items-center sm:items-start md:w-9/12 xl:w-full">
+<h6 className="text-white text-sm md:text-sm lg:text-lg m-0 p-0  w-full md:w-11/12 leading-relaxed whitespace-pre-line">
   {texts}
 </h6>
 
@@ -86,7 +86,7 @@ const texts = 'Lock in your custom EV motor and be one of the first to experienc
   <motion.img  initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.1 }}
-        transition={{ duration: 1.5, ease: "easeInOut" }} src="/image 377.png" className="mt-5 md:mt-0 md:ms-10 w-4/12 md:w-[10%]" alt="" />
+        transition={{ duration: 1.5, ease: "easeInOut" }} src="/image 377.png" className="mt-5 md:mt-0 lg:ms-10 w-4/12 md:w-[10%]" alt="" />
     </div>
     </section>
 
